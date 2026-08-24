@@ -1,0 +1,2164 @@
+{
+  "rows": [
+    {
+      "backbone": "RN101",
+      "dataset": "caltech101",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 92.69776876267748,
+          "val": 92.7914047241211,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "R3",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 92.61663286004057,
+          "val": 92.7914047241211,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 92.61663286004057,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "caltech101",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 92.12981744421907,
+          "val": 91.56441497802734,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "R3",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 92.41379310344827,
+          "val": 91.9478530883789,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "R3",
+            "last",
+            "R3",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 92.41379310344827,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "caltech101",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 92.17038539553752,
+          "val": 92.33128356933594,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "R3",
+            "R2",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 92.00811359026369,
+          "val": 92.17790985107422,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "R3",
+            "last",
+            "R3",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 92.00811359026369,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "caltech101",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 94.15821501014199,
+          "val": 94.09508514404297,
+          "alpha": 6723.357536499333,
+          "subset": [
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 93.95537525354969,
+          "val": 94.47852325439453,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "R3",
+            "R4",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 93.95537525354969,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "caltech101",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 94.36105476673428,
+          "val": 94.55521392822266,
+          "alpha": 6723.357536499333,
+          "subset": [
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 94.36105476673428,
+          "val": 94.55521392822266,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "R3",
+            "R3",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 94.36105476673428,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "caltech101",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 93.79310344827586,
+          "val": 94.24845886230469,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "R4",
+            "R4",
+            "R1",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 94.4421906693712,
+          "val": 94.32514953613281,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "R4",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 94.4421906693712,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "dtd",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 54.07801418439716,
+          "val": 54.7872314453125,
+          "alpha": 2592.943797404673,
+          "subset": [
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 55.141843971631204,
+          "val": 55.053192138671875,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "R3",
+            "R4",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 55.141843971631204,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "dtd",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 52.77777777777778,
+          "val": 55.49645233154297,
+          "alpha": 0.07278953843983152,
+          "subset": [
+            "R4",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 53.486997635933804,
+          "val": 56.11702346801758,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "R3",
+            "last",
+            "R1",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 53.486997635933804,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "dtd",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 56.26477541371158,
+          "val": 57.180850982666016,
+          "alpha": 1000.0000000000013,
+          "subset": [
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 56.205673758865245,
+          "val": 57.80141830444336,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "R3",
+            "R4",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 56.205673758865245,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "dtd",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 65.83924349881796,
+          "val": 67.46453857421875,
+          "alpha": 17433.288221999854,
+          "subset": [
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 68.08510638297872,
+          "val": 67.99645233154297,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "R3",
+            "R3",
+            "last",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.08510638297872,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "dtd",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 66.37115839243499,
+          "val": 66.4893569946289,
+          "alpha": 6723.357536499333,
+          "subset": [
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 66.19385342789599,
+          "val": 67.81914520263672,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "R3",
+            "last",
+            "R2",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 66.19385342789599,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "dtd",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 65.95744680851064,
+          "val": 65.0709228515625,
+          "alpha": 10826.367338740543,
+          "subset": [
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 66.43026004728132,
+          "val": 66.93262481689453,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "R3",
+            "last",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 66.43026004728132,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "eurosat",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 67.11111111111111,
+          "val": 68.06666564941406,
+          "alpha": 72789.53843983161,
+          "subset": [
+            "R3",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 66.98765432098766,
+          "val": 67.96666717529297,
+          "alpha": 621.016941891561,
+          "subset": [
+            "R3",
+            "R2",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 66.98765432098766,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "eurosat",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.5679012345679,
+          "val": 69.46666717529297,
+          "alpha": 57.36152510448683,
+          "subset": [
+            "R3",
+            "R4",
+            "R4",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 71.49382716049382,
+          "val": 70.9333267211914,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "R3",
+            "R2",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 71.49382716049382,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "eurosat",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 71.67901234567901,
+          "val": 72.63333129882812,
+          "alpha": 17433.288221999854,
+          "subset": [
+            "R3",
+            "R2",
+            "R3",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 71.79012345679013,
+          "val": 72.33332824707031,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "R3",
+            "R2",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 71.79012345679013,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "eurosat",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 86.33333333333333,
+          "val": 85.89999389648438,
+          "alpha": 117210.22975334803,
+          "subset": [
+            "R3",
+            "R2"
+          ]
+        },
+        "F1": {
+          "test": 86.32098765432099,
+          "val": 85.93333435058594,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "R3",
+            "R3",
+            "R2",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.32098765432099,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "eurosat",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 86.04938271604938,
+          "val": 85.33333587646484,
+          "alpha": 117210.22975334803,
+          "subset": [
+            "R3",
+            "R3",
+            "R1",
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 85.91358024691358,
+          "val": 85.5999984741211,
+          "alpha": 1610.2620275609393,
+          "subset": [
+            "R3",
+            "R3",
+            "R2",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 85.91358024691358,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "eurosat",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 85.80246913580247,
+          "val": 85.43333435058594,
+          "alpha": 117210.22975334803,
+          "subset": [
+            "R3",
+            "R2",
+            "R2"
+          ]
+        },
+        "F1": {
+          "test": 85.95061728395062,
+          "val": 85.83333587646484,
+          "alpha": 6723.357536499333,
+          "subset": [
+            "R3",
+            "R3",
+            "R2",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 85.93827160493827,
+      "anchor_dev": 0.012345679012355504
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "fgvc",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 23.522352235223522,
+          "val": 24.733333587646484,
+          "alpha": 57.36152510448683,
+          "subset": [
+            "last",
+            "R1",
+            "last",
+            "R2"
+          ]
+        },
+        "F1": {
+          "test": 22.982298229822984,
+          "val": 24.599998474121094,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 22.982298229822984,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "fgvc",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 23.192319231923193,
+          "val": 24.53333282470703,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 23.37233723372337,
+          "val": 24.5,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 23.37233723372337,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "fgvc",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 23.042304230423042,
+          "val": 24.666667938232422,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "last",
+            "last",
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 23.312331233123313,
+          "val": 24.53333282470703,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "last",
+            "last",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 23.312331233123313,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "fgvc",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 37.653765376537656,
+          "val": 38.766666412353516,
+          "alpha": 239.50266199874855,
+          "subset": [
+            "last",
+            "R4",
+            "last",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 38.853885388538856,
+          "val": 39.89999771118164,
+          "alpha": 57.36152510448683,
+          "subset": [
+            "last",
+            "R3",
+            "last",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 38.853885388538856,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "fgvc",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 37.593759375937594,
+          "val": 37.43333053588867,
+          "alpha": 239.50266199874855,
+          "subset": [
+            "last",
+            "R4",
+            "last",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 37.593759375937594,
+          "val": 39.53333282470703,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "last",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 37.593759375937594,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "fgvc",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 35.40354035403541,
+          "val": 35.70000076293945,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "last",
+            "R4",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 37.983798379837985,
+          "val": 37.70000076293945,
+          "alpha": 239.50266199874855,
+          "subset": [
+            "last",
+            "R3",
+            "last",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 37.983798379837985,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "food101",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 81.03630363036304,
+          "val": 79.93399810791016,
+          "alpha": 0.028072162039411767,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 81.03960396039604,
+          "val": 79.93399810791016,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 81.03960396039604,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "food101",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 80.4950495049505,
+          "val": 80.0,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 80.75577557755776,
+          "val": 79.96699523925781,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "last",
+            "last",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 80.75577557755776,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "food101",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 80.7095709570957,
+          "val": 79.73597717285156,
+          "alpha": 0.07278953843983152,
+          "subset": [
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 80.65676567656766,
+          "val": 79.8349838256836,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "last",
+            "last",
+            "R1",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 80.65676567656766,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "food101",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 81.64026402640265,
+          "val": 80.62706756591797,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 81.5973597359736,
+          "val": 80.59406280517578,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 81.5973597359736,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "food101",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 81.88448844884489,
+          "val": 81.32013702392578,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "last",
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 81.77227722772277,
+          "val": 81.12211608886719,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 81.77227722772277,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "food101",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 81.07260726072607,
+          "val": 80.72607421875,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 81.33003300330033,
+          "val": 80.79208374023438,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "last",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 81.33003300330033,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_flowers",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 84.97766950872919,
+          "val": 85.9897232055664,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "last",
+            "R1",
+            "last",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 86.60170523751522,
+          "val": 87.46786499023438,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.60170523751522,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_flowers",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 85.74908647990256,
+          "val": 87.27506256103516,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "R3",
+            "last",
+            "R4"
+          ]
+        },
+        "F1": {
+          "test": 87.17011774259034,
+          "val": 88.56040954589844,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 87.17011774259034,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_flowers",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 85.91149005278116,
+          "val": 86.1825180053711,
+          "alpha": 239.50266199874855,
+          "subset": [
+            "last",
+            "R2"
+          ]
+        },
+        "F1": {
+          "test": 86.68290702395453,
+          "val": 87.3393325805664,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.68290702395453,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_flowers",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 95.29029638652051,
+          "val": 95.50128936767578,
+          "alpha": 72789.53843983161,
+          "subset": [
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 96.42712139667073,
+          "val": 96.40103149414062,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "R3",
+            "last",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 96.42712139667073,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_flowers",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 94.39707673568819,
+          "val": 94.7300796508789,
+          "alpha": 45203.5365636024,
+          "subset": [
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 95.24969549330085,
+          "val": 95.62981414794922,
+          "alpha": 621.016941891561,
+          "subset": [
+            "R3",
+            "last",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 95.24969549330085,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_flowers",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 95.61510353227771,
+          "val": 95.5655517578125,
+          "alpha": 117210.22975334803,
+          "subset": [
+            "R3",
+            "R3",
+            "R1",
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 96.58952496954933,
+          "val": 96.78662872314453,
+          "alpha": 57.36152510448683,
+          "subset": [
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 96.58952496954933,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_pets",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 87.95312074134641,
+          "val": 86.27717590332031,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 86.67211774325429,
+          "val": 86.27717590332031,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "last",
+            "last",
+            "R2"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.67211774325429,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_pets",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 85.25483783047152,
+          "val": 86.54891204833984,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "R2"
+          ]
+        },
+        "F1": {
+          "test": 85.63641319160534,
+          "val": 86.95652770996094,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "R2",
+            "R2",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 85.63641319160534,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_pets",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 86.42681929681112,
+          "val": 86.54891204833984,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 86.18152085036795,
+          "val": 86.41304016113281,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.18152085036795,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_pets",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 90.78768056691196,
+          "val": 91.0326156616211,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "last",
+            "R1",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 89.23412373943854,
+          "val": 90.625,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 89.23412373943854,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_pets",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 89.47942218588172,
+          "val": 91.98370361328125,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "last",
+            "R1",
+            "last",
+            "R4"
+          ]
+        },
+        "F1": {
+          "test": 89.80648678113927,
+          "val": 91.71195983886719,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R4",
+            "last",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 89.80648678113927,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "oxford_pets",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 89.94276369582992,
+          "val": 91.0326156616211,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 90.07904061052058,
+          "val": 91.30435180664062,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R4",
+            "last",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 90.07904061052058,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "stanford_cars",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 66.14848899390623,
+          "val": 67.88990783691406,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 66.14848899390623,
+          "val": 68.25688171386719,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "last",
+            "last",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 66.14848899390623,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "stanford_cars",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 68.25021763462256,
+          "val": 69.84709167480469,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "last",
+            "R1",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 67.8646934460888,
+          "val": 69.5412826538086,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "last",
+            "last",
+            "last",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 67.8646934460888,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "stanford_cars",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.2948638229076,
+          "val": 70.03057861328125,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "last",
+            "R2",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 68.52381544584007,
+          "val": 69.48011779785156,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.52381544584007,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "stanford_cars",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 76.38353438627037,
+          "val": 78.1651382446289,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "last",
+            "R4",
+            "last",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 76.95560253699789,
+          "val": 78.40978240966797,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R4",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 76.95560253699789,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "stanford_cars",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 76.63225966919538,
+          "val": 78.2262954711914,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "last",
+            "R2",
+            "R1",
+            "R2"
+          ]
+        },
+        "F1": {
+          "test": 77.29138166894664,
+          "val": 79.51070404052734,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "last",
+            "R3",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 77.29138166894664,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "stanford_cars",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 77.56497948016415,
+          "val": 78.7767562866211,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "last",
+            "R1",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 77.55254321601791,
+          "val": 79.02140808105469,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "last",
+            "last",
+            "R4",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 77.55254321601791,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "sun397",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 65.19899244332494,
+          "val": 66.32241821289062,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "R4",
+            "R4",
+            "R4",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 65.74811083123426,
+          "val": 66.52392578125,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "R4",
+            "last",
+            "R3",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 65.74811083123426,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "sun397",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 65.45088161209068,
+          "val": 66.12090301513672,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "R4",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 65.7632241813602,
+          "val": 66.2468490600586,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "R4",
+            "R4",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 65.7632241813602,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "sun397",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 65.22418136020151,
+          "val": 65.71788024902344,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "R4",
+            "R2"
+          ]
+        },
+        "F1": {
+          "test": 65.76826196473552,
+          "val": 66.02014923095703,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "R4",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 65.76826196473552,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "sun397",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 70.91687657430731,
+          "val": 71.46095275878906,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "last",
+            "R4",
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 71.45088161209068,
+          "val": 72.29219055175781,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "last",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 71.45088161209068,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "sun397",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 70.67002518891688,
+          "val": 71.15869140625,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R4",
+            "last",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 71.44584382871537,
+          "val": 71.78841400146484,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R3",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 71.44080604534005,
+      "anchor_dev": 0.005037783375314575
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "sun397",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 70.5793450881612,
+          "val": 70.8816146850586,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "R4",
+            "last",
+            "R1",
+            "R2"
+          ]
+        },
+        "F1": {
+          "test": 71.32997481108312,
+          "val": 71.738037109375,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "R3",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 71.33501259445843,
+      "anchor_dev": 0.005037783375314575
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "ucf101",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 71.16045466560931,
+          "val": 73.23497772216797,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "R4",
+            "R3",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 70.81681205392546,
+          "val": 73.23497772216797,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "R4",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 70.81681205392546,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "ucf101",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.8123182659265,
+          "val": 73.65647888183594,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "last",
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 70.57890563045203,
+          "val": 74.2887191772461,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last",
+            "R3"
+          ]
+        }
+      },
+      "anchor_free_F1": 70.57890563045203,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "ucf101",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.94448850118953,
+          "val": 72.4446792602539,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "R4",
+            "R3",
+            "R3",
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 70.79037800687286,
+          "val": 73.23497772216797,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "R4",
+            "last",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 70.79037800687286,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "ucf101",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 78.90563045202221,
+          "val": 85.19493865966797,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "R4",
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 79.16997092254825,
+          "val": 86.14330291748047,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "R4",
+            "R3",
+            "R4"
+          ]
+        }
+      },
+      "anchor_free_F1": 79.16997092254825,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "ucf101",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 77.74253238170763,
+          "val": 84.87881469726562,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "R4",
+            "last",
+            "last",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 78.00687285223368,
+          "val": 85.19493865966797,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "R4",
+            "last",
+            "R3",
+            "R2"
+          ]
+        }
+      },
+      "anchor_free_F1": 78.03330689928629,
+      "anchor_dev": 0.02643404705260366
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "ucf101",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 76.89664287602432,
+          "val": 82.876708984375,
+          "alpha": 45203.5365636024,
+          "subset": [
+            "R3",
+            "R2",
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 79.48717948717949,
+          "val": 84.51000213623047,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 79.48717948717949,
+      "anchor_dev": 0.0
+    }
+  ],
+  "preflight": {
+    "name": "nonlinear_fusion",
+    "fp32": [
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      }
+    ],
+    "nesting": [
+      {
+        "label": "F0 reproduces recorded le_gda (caltech101)",
+        "max_abs_diff": 6.407801578234285e-07,
+        "tol": 0.0001,
+        "acc_diff": 0.0,
+        "ok": true
+      }
+    ],
+    "pinning": {
+      "gda_R1": {
+        "reg": {
+          "n": 60,
+          "lo": 0.016666666666666666,
+          "hi": 0.05,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_R2": {
+        "reg": {
+          "n": 60,
+          "lo": 0.016666666666666666,
+          "hi": 0.06666666666666667,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_R3": {
+        "reg": {
+          "n": 60,
+          "lo": 0.016666666666666666,
+          "hi": 0.1,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_R4": {
+        "reg": {
+          "n": 60,
+          "lo": 0.0,
+          "hi": 0.016666666666666666,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_last": {
+        "reg": {
+          "n": 60,
+          "lo": 0.0,
+          "hi": 0.05,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "le_gda": {
+        "alpha": {
+          "n": 60,
+          "lo": 0.0,
+          "hi": 0.06666666666666667,
+          "lo_domain": false,
+          "hi_domain": false
+        }
+      }
+    },
+    "activation": {}
+  }
+}

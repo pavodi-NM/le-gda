@@ -1,0 +1,426 @@
+{
+  "cells": [
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "seed": 0,
+      "zs": 67.84499883651733,
+      "acc": {
+        "gpcache16": 70.69000005722046,
+        "gpcache16_matched": 70.70249915122986,
+        "gpcache8": 70.24999856948853,
+        "gpcache8_matched": 70.28749585151672,
+        "gpcache4": 69.9999988079071,
+        "gpcache4_matched": 69.94499564170837,
+        "gpcache2": 70.13999819755554,
+        "gpcache2_matched": 70.13499736785889,
+        "gda_ridge": 71.7199981212616,
+        "gda_lw": 71.7199981212616,
+        "gda": 71.7199981212616
+      },
+      "sel": {
+        "gpcache16": {
+          "val": 71.0999984741211,
+          "beta": 10.864857142857144,
+          "alpha": 5.298316906283711,
+          "sigma": 0.046415888336127774,
+          "m": 16,
+          "anchor": 0.4599063992500305
+        },
+        "gpcache8": {
+          "val": 70.86000061035156,
+          "beta": 3.4994285714285716,
+          "alpha": 13.73823795883262,
+          "sigma": 2.154434690031886,
+          "m": 8,
+          "anchor": 0.5331470966339111
+        },
+        "gpcache4": {
+          "val": 70.52999877929688,
+          "beta": 7.465428571428571,
+          "alpha": 5.298316906283711,
+          "sigma": 0.01291549665014883,
+          "m": 4,
+          "anchor": 0.43586188554763794
+        },
+        "gpcache2": {
+          "val": 70.63999938964844,
+          "beta": 8.032,
+          "alpha": 5.298316906283711,
+          "sigma": 0.01291549665014883,
+          "m": 2,
+          "anchor": 0.3427889347076416
+        },
+        "gda_ridge": {
+          "val": 71.93000030517578,
+          "reg": 0.23357214690901265,
+          "alpha": 5.298316906283711,
+          "anchor": 126.34492492675781
+        },
+        "gda_lw": {
+          "val": 71.93000030517578,
+          "reg": 0.18934615822372386,
+          "alpha": 5.298316906283711,
+          "anchor": 155.8555908203125
+        },
+        "gda": {
+          "val": 71.93000030517578,
+          "reg": 0.23357214690901265,
+          "alpha": 5.298316906283711,
+          "anchor": 126.34492492675781,
+          "mode": "ridge"
+        }
+      }
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "seed": 1,
+      "zs": 67.84499883651733,
+      "acc": {
+        "gpcache16": 70.58749794960022,
+        "gpcache16_matched": 70.44999599456787,
+        "gpcache8": 70.16499638557434,
+        "gpcache8_matched": 70.06999850273132,
+        "gpcache4": 69.82499957084656,
+        "gpcache4_matched": 70.05000114440918,
+        "gpcache2": 69.9874997138977,
+        "gpcache2_matched": 69.99250054359436,
+        "gda_ridge": 71.46999835968018,
+        "gda_lw": 71.46999835968018,
+        "gda": 71.46999835968018
+      },
+      "sel": {
+        "gpcache16": {
+          "val": 70.87999725341797,
+          "beta": 8.598571428571429,
+          "alpha": 5.298316906283711,
+          "sigma": 0.5994842503189424,
+          "m": 16,
+          "anchor": 0.49788227677345276
+        },
+        "gpcache8": {
+          "val": 70.58999633789062,
+          "beta": 9.731714285714286,
+          "alpha": 5.298316906283711,
+          "sigma": 0.5994842503189424,
+          "m": 8,
+          "anchor": 0.32367879152297974
+        },
+        "gpcache4": {
+          "val": 70.45999908447266,
+          "beta": 8.032,
+          "alpha": 5.298316906283711,
+          "sigma": 2.154434690031886,
+          "m": 4,
+          "anchor": 0.1959042251110077
+        },
+        "gpcache2": {
+          "val": 70.55000305175781,
+          "beta": 8.598571428571429,
+          "alpha": 5.298316906283711,
+          "sigma": 0.01291549665014883,
+          "m": 2,
+          "anchor": 0.3136551082134247
+        },
+        "gda_ridge": {
+          "val": 71.87999725341797,
+          "reg": 0.0695192796177561,
+          "alpha": 5.298316906283711,
+          "anchor": 143.468017578125
+        },
+        "gda_lw": {
+          "val": 71.87999725341797,
+          "reg": 0.0650004922235737,
+          "alpha": 5.298316906283711,
+          "anchor": 153.44183349609375
+        },
+        "gda": {
+          "val": 71.87999725341797,
+          "reg": 0.0695192796177561,
+          "alpha": 5.298316906283711,
+          "anchor": 143.468017578125,
+          "mode": "ridge"
+        }
+      }
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "seed": 2,
+      "zs": 67.84499883651733,
+      "acc": {
+        "gpcache16": 70.47249674797058,
+        "gpcache16_matched": 70.374995470047,
+        "gpcache8": 69.98499631881714,
+        "gpcache8_matched": 70.17499804496765,
+        "gpcache4": 69.98249888420105,
+        "gpcache4_matched": 69.92250084877014,
+        "gpcache2": 69.9524998664856,
+        "gpcache2_matched": 69.91750001907349,
+        "gda_ridge": 71.26500010490417,
+        "gda_lw": 71.26500010490417,
+        "gda": 71.26500010490417
+      },
+      "sel": {
+        "gpcache16": {
+          "val": 70.79000091552734,
+          "beta": 15.397428571428572,
+          "alpha": 5.298316906283711,
+          "sigma": 0.01291549665014883,
+          "m": 16,
+          "anchor": 0.26319852471351624
+        },
+        "gpcache8": {
+          "val": 70.38999938964844,
+          "beta": 2.932857142857143,
+          "alpha": 13.73823795883262,
+          "sigma": 2.154434690031886,
+          "m": 8,
+          "anchor": 0.5725013017654419
+        },
+        "gpcache4": {
+          "val": 70.12000274658203,
+          "beta": 11.43142857142857,
+          "alpha": 5.298316906283711,
+          "sigma": 0.16681005372000587,
+          "m": 4,
+          "anchor": 0.23321914672851562
+        },
+        "gpcache2": {
+          "val": 70.08999633789062,
+          "beta": 9.165142857142857,
+          "alpha": 5.298316906283711,
+          "sigma": 1e-10,
+          "m": 2,
+          "anchor": 0.2929811477661133
+        },
+        "gda_ridge": {
+          "val": 71.70999908447266,
+          "reg": 0.0005455594781168517,
+          "alpha": 5.298316906283711,
+          "anchor": 157.8795166015625
+        },
+        "gda_lw": {
+          "val": 71.70999908447266,
+          "reg": 0.0005452620052618242,
+          "alpha": 5.298316906283711,
+          "anchor": 157.96580505371094
+        },
+        "gda": {
+          "val": 71.70999908447266,
+          "reg": 0.0005455594781168517,
+          "alpha": 5.298316906283711,
+          "anchor": 157.8795166015625,
+          "mode": "ridge"
+        }
+      }
+    }
+  ],
+  "preflight": {
+    "name": "baselines_e4",
+    "fp32": [
+      {
+        "tensor": "f_val",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "f_te",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "pool_f",
+        "dtype": "torch.float32",
+        "ok": true
+      }
+    ],
+    "nesting": [
+      {
+        "label": "gpcache m=16, sigma^2->inf == Tip-Adapter sum",
+        "max_abs_diff": 9.5367431640625e-07,
+        "tol": 0.001,
+        "acc_diff": 0.0,
+        "ok": true
+      },
+      {
+        "label": "gda Sigma=I == nearest-class-mean",
+        "max_abs_diff": 0.00262451171875,
+        "tol": 0.01,
+        "acc_diff": 0.0,
+        "ok": true
+      },
+      {
+        "label": "gpcache m=16, sigma^2->inf == Tip-Adapter sum",
+        "max_abs_diff": 9.5367431640625e-07,
+        "tol": 0.001,
+        "acc_diff": 0.0,
+        "ok": true
+      },
+      {
+        "label": "gpcache m=16, sigma^2->inf == Tip-Adapter sum",
+        "max_abs_diff": 9.5367431640625e-07,
+        "tol": 0.001,
+        "acc_diff": 0.0,
+        "ok": true
+      }
+    ],
+    "pinning": {
+      "gpcache16": {
+        "beta": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "alpha": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "sigma": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gpcache8": {
+        "beta": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "alpha": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "sigma": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gpcache4": {
+        "beta": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "alpha": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "sigma": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gpcache2": {
+        "beta": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "alpha": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "sigma": {
+          "n": 3,
+          "lo": 0.3333333333333333,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_ridge": {
+        "alpha": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "reg": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_lw": {
+        "alpha": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        },
+        "reg": {
+          "n": 3,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      }
+    },
+    "activation": {
+      "gpcache16": {
+        "gram": {
+          "n": 3,
+          "active": 1.0,
+          "at_bound": 0.0
+        }
+      },
+      "gpcache8": {
+        "gram": {
+          "n": 3,
+          "active": 1.0,
+          "at_bound": 0.0
+        }
+      },
+      "gpcache4": {
+        "gram": {
+          "n": 3,
+          "active": 1.0,
+          "at_bound": 0.0
+        }
+      },
+      "gpcache2": {
+        "gram": {
+          "n": 3,
+          "active": 1.0,
+          "at_bound": 0.0
+        }
+      }
+    }
+  }
+}

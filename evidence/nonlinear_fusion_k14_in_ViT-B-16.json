@@ -1,0 +1,486 @@
+{
+  "rows": [
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 1,
+      "seed": 0,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 68.035,
+          "val": 68.20999908447266,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "last",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 68.1425,
+          "val": 68.29000091552734,
+          "alpha": 0.18873918221350974,
+          "subset": [
+            "last",
+            "pre",
+            "pre",
+            "L11"
+          ]
+        },
+        "F2": {
+          "test": 67.93,
+          "val": 68.16999816894531,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "L4",
+            "L10",
+            "last"
+          ]
+        },
+        "F3": {
+          "test": 68.0975,
+          "val": 68.19999694824219,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "last",
+            "last",
+            "L4",
+            "L11"
+          ]
+        },
+        "F4": {
+          "test": 68.1425,
+          "val": 68.25,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.1425,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 1,
+      "seed": 1,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 68.26,
+          "val": 68.54000091552734,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "L11",
+            "L11",
+            "L11",
+            "L4"
+          ]
+        },
+        "F1": {
+          "test": 68.165,
+          "val": 68.62999725341797,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "pre",
+            "L11",
+            "pre",
+            "pre"
+          ]
+        },
+        "F2": {
+          "test": 67.8175,
+          "val": 68.29000091552734,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "L10",
+            "last",
+            "L6"
+          ]
+        },
+        "F3": {
+          "test": 68.085,
+          "val": 68.56999969482422,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "L11",
+            "L6"
+          ]
+        },
+        "F4": {
+          "test": 68.1425,
+          "val": 68.55999755859375,
+          "alpha": 385.6620421163474,
+          "subset": [
+            "last",
+            "pre",
+            "L10",
+            "L10"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.165,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 1,
+      "seed": 2,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 68.2225,
+          "val": 68.38999938964844,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11",
+            "L10",
+            "L10"
+          ]
+        },
+        "F1": {
+          "test": 68.28,
+          "val": 68.5199966430664,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "L11",
+            "L11",
+            "pre"
+          ]
+        },
+        "F2": {
+          "test": 67.8725,
+          "val": 68.05999755859375,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "L10",
+            "L10",
+            "L10",
+            "L8"
+          ]
+        },
+        "F3": {
+          "test": 68.2425,
+          "val": 68.33999633789062,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "L11",
+            "L11",
+            "L4",
+            "pre"
+          ]
+        },
+        "F4": {
+          "test": 68.2575,
+          "val": 68.44999694824219,
+          "alpha": 239.50266199874855,
+          "subset": [
+            "L11",
+            "L11",
+            "L10"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.28,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 4,
+      "seed": 0,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 69.905,
+          "val": 70.5,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 69.865,
+          "val": 70.44000244140625,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "pre"
+          ]
+        },
+        "F2": {
+          "test": 68.6425,
+          "val": 69.18999481201172,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "pre"
+          ]
+        },
+        "F3": {
+          "test": 69.895,
+          "val": 70.5199966430664,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last",
+            "last",
+            "L4",
+            "pre"
+          ]
+        },
+        "F4": {
+          "test": 69.86,
+          "val": 70.37999725341797,
+          "alpha": 1000.0000000000013,
+          "subset": [
+            "last",
+            "L8"
+          ]
+        }
+      },
+      "anchor_free_F1": 69.865,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 4,
+      "seed": 1,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 69.795,
+          "val": 70.19000244140625,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "L11",
+            "L4",
+            "L6",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 69.6725,
+          "val": 70.12999725341797,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "L11",
+            "L11",
+            "L11",
+            "L6"
+          ]
+        },
+        "F2": {
+          "test": 68.6925,
+          "val": 68.91999816894531,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F3": {
+          "test": 69.8175,
+          "val": 70.0999984741211,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F4": {
+          "test": 69.8175,
+          "val": 70.13999938964844,
+          "alpha": 621.016941891561,
+          "subset": [
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 69.6725,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 4,
+      "seed": 2,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 69.86,
+          "val": 69.88999938964844,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "L11",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 69.79,
+          "val": 69.97000122070312,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "L11",
+            "last"
+          ]
+        },
+        "F2": {
+          "test": 68.35,
+          "val": 68.61000061035156,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L10",
+            "L6",
+            "L10",
+            "L11"
+          ]
+        },
+        "F3": {
+          "test": 69.7875,
+          "val": 69.80999755859375,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "L11",
+            "L11",
+            "L4",
+            "pre"
+          ]
+        },
+        "F4": {
+          "test": 69.4925,
+          "val": 69.58999633789062,
+          "alpha": 385.6620421163474,
+          "subset": [
+            "last",
+            "L6"
+          ]
+        }
+      },
+      "anchor_free_F1": 69.79,
+      "anchor_dev": 0.0
+    }
+  ],
+  "preflight": {
+    "name": "nonlinear_fusion",
+    "fp32": [
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      }
+    ],
+    "nesting": [
+      {
+        "label": "F0 reproduces recorded le_gda (imagenet)",
+        "max_abs_diff": 5.626678500902926e-07,
+        "tol": 0.0001,
+        "acc_diff": 0.0,
+        "ok": true
+      }
+    ],
+    "pinning": {
+      "gda_L4": {
+        "reg": {
+          "n": 6,
+          "lo": 0.5,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L6": {
+        "reg": {
+          "n": 6,
+          "lo": 0.5,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L8": {
+        "reg": {
+          "n": 6,
+          "lo": 0.5,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L10": {
+        "reg": {
+          "n": 6,
+          "lo": 0.6666666666666666,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L11": {
+        "reg": {
+          "n": 6,
+          "lo": 0.5,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_pre": {
+        "reg": {
+          "n": 6,
+          "lo": 0.5,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_last": {
+        "reg": {
+          "n": 6,
+          "lo": 0.5,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "le_gda": {
+        "alpha": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        }
+      }
+    },
+    "activation": {}
+  }
+}

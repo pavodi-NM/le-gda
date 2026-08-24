@@ -1,0 +1,290 @@
+{
+  "rows": [
+    {
+      "backbone": "RN101",
+      "dataset": "imagenet",
+      "K": 2,
+      "seed": 0,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 62.27,
+          "val": 62.68999481201172,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last",
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 62.4525,
+          "val": 62.97999572753906,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "last",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 62.4525,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "imagenet",
+      "K": 2,
+      "seed": 1,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 62.6025,
+          "val": 62.88999938964844,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last",
+            "R1",
+            "R1",
+            "R4"
+          ]
+        },
+        "F1": {
+          "test": 62.7275,
+          "val": 62.959999084472656,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "last",
+            "R4",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 62.7275,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "imagenet",
+      "K": 2,
+      "seed": 2,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 62.3225,
+          "val": 62.790000915527344,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "R4",
+            "last",
+            "last",
+            "R1"
+          ]
+        },
+        "F1": {
+          "test": 62.1475,
+          "val": 62.72999572753906,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "R4",
+            "R4",
+            "R4",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 62.1475,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "imagenet",
+      "K": 8,
+      "seed": 0,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 64.445,
+          "val": 64.87999725341797,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "last",
+            "R2",
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 65.2,
+          "val": 65.34000396728516,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last",
+            "R3",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 65.2,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "imagenet",
+      "K": 8,
+      "seed": 1,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 64.6225,
+          "val": 64.91000366210938,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 65.235,
+          "val": 65.37000274658203,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last",
+            "R3",
+            "R4",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 65.2325,
+      "anchor_dev": 0.0024999999999977263
+    },
+    {
+      "backbone": "RN101",
+      "dataset": "imagenet",
+      "K": 8,
+      "seed": 2,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 64.615,
+          "val": 64.66000366210938,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "last",
+            "R1",
+            "R3"
+          ]
+        },
+        "F1": {
+          "test": 64.6975,
+          "val": 65.13999938964844,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last",
+            "R3",
+            "R4",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 64.7,
+      "anchor_dev": 0.0024999999999977263
+    }
+  ],
+  "preflight": {
+    "name": "nonlinear_fusion",
+    "fp32": [
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      }
+    ],
+    "nesting": [
+      {
+        "label": "F0 reproduces recorded le_gda (imagenet)",
+        "max_abs_diff": 2.403259280470138e-06,
+        "tol": 0.0001,
+        "acc_diff": 0.0,
+        "ok": true
+      }
+    ],
+    "pinning": {
+      "gda_R1": {
+        "reg": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.16666666666666666,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_R2": {
+        "reg": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_R3": {
+        "reg": {
+          "n": 6,
+          "lo": 0.16666666666666666,
+          "hi": 0.16666666666666666,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_R4": {
+        "reg": {
+          "n": 6,
+          "lo": 0.16666666666666666,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_last": {
+        "reg": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "le_gda": {
+        "alpha": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        }
+      }
+    },
+    "activation": {}
+  }
+}

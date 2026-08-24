@@ -1,0 +1,590 @@
+{
+  "rows": [
+    {
+      "backbone": "RN50",
+      "dataset": "stanford_cars",
+      "K": 16,
+      "seed": 0,
+      "test_split": "testfull",
+      "le_gda": 76.23430490493774,
+      "le_gda_val": 77.43119049072266,
+      "subset": [
+        "last",
+        "R4",
+        "R1"
+      ],
+      "n_distinct": 3,
+      "w_oracle_S": 76.44571685791016,
+      "w_S": [
+        0.3333333333333333,
+        0.4166666666666667,
+        0.25
+      ],
+      "spaces_S": [
+        "R1",
+        "R4",
+        "last"
+      ],
+      "w_oracle_all": 76.44571685791016,
+      "w_all": [
+        0.0,
+        0.0,
+        0.16666666666666666,
+        0.5,
+        0.3333333333333333
+      ],
+      "w_oracle_all_grid": 76.3586654663086,
+      "sel_oracle": 76.23430490493774,
+      "sel_oracle_subset": [
+        "last",
+        "R4",
+        "R1"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "stanford_cars",
+      "K": 16,
+      "seed": 1,
+      "test_split": "testfull",
+      "le_gda": 74.82900619506836,
+      "le_gda_val": 77.30886840820312,
+      "subset": [
+        "last",
+        "R1",
+        "R1"
+      ],
+      "n_distinct": 2,
+      "w_oracle_S": 75.28914642333984,
+      "w_S": [
+        0.0,
+        1.0
+      ],
+      "spaces_S": [
+        "R1",
+        "last"
+      ],
+      "w_oracle_all": 76.8685519695282,
+      "w_all": [
+        0.0,
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "w_oracle_all_grid": 76.84368133544922,
+      "sel_oracle": 76.8685519695282,
+      "sel_oracle_subset": [
+        "last",
+        "R4",
+        "last",
+        "R1"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "stanford_cars",
+      "K": 16,
+      "seed": 2,
+      "test_split": "testfull",
+      "le_gda": 76.30891799926758,
+      "le_gda_val": 77.79816436767578,
+      "subset": [
+        "last",
+        "R4",
+        "last"
+      ],
+      "n_distinct": 2,
+      "w_oracle_S": 76.60739135742188,
+      "w_S": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "spaces_S": [
+        "R4",
+        "last"
+      ],
+      "w_oracle_all": 76.70687866210938,
+      "w_all": [
+        0.0,
+        0.0,
+        0.16666666666666666,
+        0.3333333333333333,
+        0.5
+      ],
+      "w_oracle_all_grid": 76.70687866210938,
+      "sel_oracle": 76.60738825798035,
+      "sel_oracle_subset": [
+        "last",
+        "R4",
+        "last"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "fgvc",
+      "K": 16,
+      "seed": 0,
+      "test_split": "testfull",
+      "le_gda": 41.554152965545654,
+      "le_gda_val": 42.733333587646484,
+      "subset": [
+        "R4",
+        "last",
+        "R4",
+        "R4"
+      ],
+      "n_distinct": 2,
+      "w_oracle_S": 42.034202575683594,
+      "w_S": [
+        0.6666666666666666,
+        0.3333333333333333
+      ],
+      "spaces_S": [
+        "R4",
+        "last"
+      ],
+      "w_oracle_all": 42.03420281410217,
+      "w_all": [
+        0.0,
+        0.0,
+        0.0,
+        0.6666666666666666,
+        0.3333333333333333
+      ],
+      "w_oracle_all_grid": 42.034202575683594,
+      "sel_oracle": 42.03420281410217,
+      "sel_oracle_subset": [
+        "last",
+        "R4",
+        "R4"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "fgvc",
+      "K": 16,
+      "seed": 1,
+      "test_split": "testfull",
+      "le_gda": 42.93429255485535,
+      "le_gda_val": 42.43333435058594,
+      "subset": [
+        "R4",
+        "last",
+        "R4"
+      ],
+      "n_distinct": 2,
+      "w_oracle_S": 42.93429183959961,
+      "w_S": [
+        0.6666666666666666,
+        0.3333333333333333
+      ],
+      "spaces_S": [
+        "R4",
+        "last"
+      ],
+      "w_oracle_all": 42.99429655075073,
+      "w_all": [
+        0.0,
+        0.0,
+        0.5,
+        0.3333333333333333,
+        0.16666666666666666
+      ],
+      "w_oracle_all_grid": 42.96429443359375,
+      "sel_oracle": 42.99429655075073,
+      "sel_oracle_subset": [
+        "R4",
+        "last",
+        "R4",
+        "R1"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "fgvc",
+      "K": 16,
+      "seed": 2,
+      "test_split": "testfull",
+      "le_gda": 42.36423373222351,
+      "le_gda_val": 42.46666717529297,
+      "subset": [
+        "R4",
+        "last",
+        "R4",
+        "R1"
+      ],
+      "n_distinct": 3,
+      "w_oracle_S": 42.81427764892578,
+      "w_S": [
+        0.08333333333333333,
+        0.6666666666666666,
+        0.25
+      ],
+      "spaces_S": [
+        "R1",
+        "R4",
+        "last"
+      ],
+      "w_oracle_all": 42.81427764892578,
+      "w_all": [
+        0.0,
+        0.0,
+        0.5,
+        0.3333333333333333,
+        0.16666666666666666
+      ],
+      "w_oracle_all_grid": 42.66426467895508,
+      "sel_oracle": 42.664265632629395,
+      "sel_oracle_subset": [
+        "last",
+        "R4",
+        "R4",
+        "R4"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "oxford_flowers",
+      "K": 16,
+      "seed": 0,
+      "test_split": "testfull",
+      "le_gda": 96.42712473869324,
+      "le_gda_val": 96.01542663574219,
+      "subset": [
+        "R4",
+        "last",
+        "last"
+      ],
+      "n_distinct": 2,
+      "w_oracle_S": 96.7519302368164,
+      "w_S": [
+        0.25,
+        0.75
+      ],
+      "spaces_S": [
+        "R4",
+        "last"
+      ],
+      "w_oracle_all": 96.7519302368164,
+      "w_all": [
+        0.0,
+        0.0,
+        0.16666666666666666,
+        0.3333333333333333,
+        0.5
+      ],
+      "w_oracle_all_grid": 96.7519302368164,
+      "sel_oracle": 96.75192832946777,
+      "sel_oracle_subset": [
+        "R4",
+        "last",
+        "last",
+        "last"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "oxford_flowers",
+      "K": 16,
+      "seed": 1,
+      "test_split": "testfull",
+      "le_gda": 95.98051309585571,
+      "le_gda_val": 96.59383392333984,
+      "subset": [
+        "R4",
+        "last",
+        "last"
+      ],
+      "n_distinct": 2,
+      "w_oracle_S": 96.06172180175781,
+      "w_S": [
+        0.4166666666666667,
+        0.5833333333333334
+      ],
+      "spaces_S": [
+        "R4",
+        "last"
+      ],
+      "w_oracle_all": 96.1023178100586,
+      "w_all": [
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "w_oracle_all_grid": 96.1023178100586,
+      "sel_oracle": 96.10231518745422,
+      "sel_oracle_subset": [
+        "R4",
+        "last",
+        "R1"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "oxford_flowers",
+      "K": 16,
+      "seed": 2,
+      "test_split": "testfull",
+      "le_gda": 96.0617184638977,
+      "le_gda_val": 96.33676147460938,
+      "subset": [
+        "last",
+        "R4"
+      ],
+      "n_distinct": 2,
+      "w_oracle_S": 96.22412109375,
+      "w_S": [
+        0.5,
+        0.5
+      ],
+      "spaces_S": [
+        "R4",
+        "last"
+      ],
+      "w_oracle_all": 96.22412109375,
+      "w_all": [
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "w_oracle_all_grid": 96.22412109375,
+      "sel_oracle": 96.22411727905273,
+      "sel_oracle_subset": [
+        "last",
+        "R4"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "dtd",
+      "K": 16,
+      "seed": 0,
+      "test_split": "testfull",
+      "le_gda": 67.19858050346375,
+      "le_gda_val": 69.14893341064453,
+      "subset": [
+        "R3"
+      ],
+      "n_distinct": 1,
+      "w_oracle_S": 68.14421081542969,
+      "w_S": [
+        1.0
+      ],
+      "spaces_S": [
+        "R3"
+      ],
+      "w_oracle_all": 69.14893341064453,
+      "w_all": [
+        0.0,
+        0.16666666666666666,
+        0.3333333333333333,
+        0.16666666666666666,
+        0.3333333333333333
+      ],
+      "w_oracle_all_grid": 69.14893341064453,
+      "sel_oracle": 68.14420819282532,
+      "sel_oracle_subset": [
+        "R3"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "dtd",
+      "K": 16,
+      "seed": 1,
+      "test_split": "testfull",
+      "le_gda": 67.31678247451782,
+      "le_gda_val": 68.61701965332031,
+      "subset": [
+        "R3"
+      ],
+      "n_distinct": 1,
+      "w_oracle_S": 67.73049926757812,
+      "w_S": [
+        1.0
+      ],
+      "spaces_S": [
+        "R3"
+      ],
+      "w_oracle_all": 67.73049926757812,
+      "w_all": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "w_oracle_all_grid": 67.73049926757812,
+      "sel_oracle": 67.73049831390381,
+      "sel_oracle_subset": [
+        "R3"
+      ]
+    },
+    {
+      "backbone": "RN50",
+      "dataset": "dtd",
+      "K": 16,
+      "seed": 2,
+      "test_split": "testfull",
+      "le_gda": 67.25768446922302,
+      "le_gda_val": 67.641845703125,
+      "subset": [
+        "R4"
+      ],
+      "n_distinct": 1,
+      "w_oracle_S": 67.61228942871094,
+      "w_S": [
+        1.0
+      ],
+      "spaces_S": [
+        "R4"
+      ],
+      "w_oracle_all": 68.43971610069275,
+      "w_all": [
+        0.0,
+        0.0,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "w_oracle_all_grid": 68.43971252441406,
+      "sel_oracle": 68.43971610069275,
+      "sel_oracle_subset": [
+        "R4",
+        "last",
+        "R1"
+      ]
+    }
+  ],
+  "preflight": {
+    "name": "weighting_ceiling",
+    "fp32": [
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R1",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R2",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R3",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_R4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      }
+    ],
+    "nesting": [
+      {
+        "label": "le_gda reproduces the record (stanford_cars)",
+        "max_abs_diff": 0.0,
+        "tol": 1e-06,
+        "acc_diff": 0.0,
+        "ok": true
+      }
+    ],
+    "pinning": {
+      "le_gda": {
+        "alpha": {
+          "n": 12,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        }
+      }
+    },
+    "activation": {}
+  }
+}
