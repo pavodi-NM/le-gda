@@ -1,6 +1,5 @@
 # LE-GDA — Layer-Ensemble Gaussian Discriminant Analysis for training-free few-shot CLIP
 
-**Below the final layer: weak intermediate features improve training-free few-shot CLIP.**
 
 LE-GDA fits the same shared-covariance Gaussian discriminant head independently in
 several feature spaces of **one** CLIP forward pass — intermediate transformer
