@@ -387,9 +387,9 @@ them.
 
 ```bibtex
 @misc{legda2026,
-  title  = {Below the Final Layer: Weak Intermediate Features Improve
+  title  = {LE-GDA: Layer-Ensemble Gaussian Discriminant Analysis for
             Training-Free Few-Shot CLIP},
-  author = {TODO},
+  author = {Pavodi Ndoyi Maniamfu, Vogel Kiketa, Kuetu Kuzulu Zezina, Jaking Mukendi Kabongo, David Mayoya Kutangila, Mampuya Kinkani Pescie Honore, Sieka Wolo L'Or},
   year   = {2026}
 }
 ```
