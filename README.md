@@ -477,11 +477,6 @@ them.
 }
 ```
 
-"""
-     I am working on drafting the ReadMe files, which include the entire process of reproducing the results of  PyBullet to Blender for generating sim data. I am also recording the errors that could occured and how to fix them. I am including the code snippets to run everything from a clean rebuild. 
-"""
-
-
 
 
 
