@@ -1,0 +1,37 @@
+--- /dev/fd/63	2026-08-26 09:58:17.748091726 +0900
++++ utils.py	2026-08-26 09:54:24.943850249 +0900
+@@ -106,15 +106,27 @@
+         best_acc = 0
+         best_beta, best_alpha = 0, 0
+ 
++        # LOOP-INVARIANT HOISTING -- NUMERICALLY EXACT, NOT A METHOD CHANGE.
++        # `affinity` and `clip_logits` depend on neither beta nor alpha, and
++        # `cache_logits` depends on beta only. Upstream recomputed all three
++        # inside the 200x20 = 4000-iteration double loop. Identical inputs give
++        # identical outputs, the iteration order and the `acc > best_acc`
++        # tie-breaking are untouched, so every number is unchanged.
++        #
++        # Required for ImageNet and only for ImageNet: at 16000 cache entries
++        # and 10000 val images each `features @ cache_keys` is 1.6e11 FLOPs, so
++        # the original form is ~1.3e15 FLOPs per search -- about a day per call
++        # on this card, 24 calls in the grid. Hoisting makes it minutes.
++        # Verified against a completed cell: see the plan's SS1.9.
++        if adapter:
++            affinity = adapter(features)
++        else:
++            affinity = features @ cache_keys
++        clip_logits = 100. * features @ clip_weights
++
+         for beta in beta_list:
++            cache_logits = ((-1) * (beta - beta * affinity)).exp() @ cache_values
+             for alpha in alpha_list:
+-                if adapter:
+-                    affinity = adapter(features)
+-                else:
+-                    affinity = features @ cache_keys
+-
+-                cache_logits = ((-1) * (beta - beta * affinity)).exp() @ cache_values
+-                clip_logits = 100. * features @ clip_weights
+                 tip_logits = clip_logits + cache_logits * alpha
+                 acc = cls_acc(tip_logits, labels)
+             

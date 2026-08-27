@@ -1,0 +1,406 @@
+{
+ "meta": {
+  "plan": "ORIGINAL_IMPLEMENTATIONS_OUR_PROTOCOL.md S1.11",
+  "design_note": "patches/proto_adapter_design_note.md",
+  "protocol": "ours",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "scale": [
+   64.0
+  ],
+  "margins": [
+   0.0,
+   0.1,
+   0.2,
+   0.3,
+   0.4
+  ],
+  "loss_on": "adapter",
+  "alphas": [
+   0.001,
+   117210.22975334803,
+   40
+  ],
+  "preflight_ok": true,
+  "wall_s": 1742.5
+ },
+ "rows": [
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "imagenet",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 67.84499883651733,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     69.4974958896637,
+     69.56499814987183,
+     69.49499845504761
+    ],
+    "PROTO-F": [
+     69.63499784469604,
+     69.96249556541443,
+     69.8574960231781
+    ]
+   },
+   "acc": {
+    "PROTO": 69.51916416486104,
+    "PROTO-F": 69.81832981109619
+   },
+   "std": {
+    "PROTO": 0.032425555059673865,
+    "PROTO-F": 0.1365385986832245
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "caltech101",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 93.26571822166443,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     95.050710439682,
+     94.92900371551514,
+     94.60446238517761
+    ],
+    "PROTO-F": [
+     95.29411792755127,
+     95.17241716384888,
+     94.64502930641174
+    ]
+   },
+   "acc": {
+    "PROTO": 94.86139218012492,
+    "PROTO-F": 95.03718813260396
+   },
+   "std": {
+    "PROTO": 0.18834865069086867,
+    "PROTO-F": 0.2817140130129387
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "oxford_pets",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 89.0978455543518,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     91.49631857872009,
+     91.36003851890564,
+     91.19650721549988
+    ],
+    "PROTO-F": [
+     91.71435832977295,
+     92.04142689704895,
+     91.27827286720276
+    ]
+   },
+   "acc": {
+    "PROTO": 91.35095477104187,
+    "PROTO-F": 91.67801936467488
+   },
+   "std": {
+    "PROTO": 0.1225658985619037,
+    "PROTO-F": 0.3126141483319003
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "stanford_cars",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 65.55154919624329,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     72.47855067253113,
+     73.5356330871582,
+     73.1874167919159
+    ],
+    "PROTO-F": [
+     73.28690886497498,
+     74.4932234287262,
+     74.46835041046143
+    ]
+   },
+   "acc": {
+    "PROTO": 73.06720018386841,
+    "PROTO-F": 74.0828275680542
+   },
+   "std": {
+    "PROTO": 0.4398445425877071,
+    "PROTO-F": 0.562891110365575
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "oxford_flowers",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 70.80795764923096,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     94.07227039337158,
+     93.82866621017456,
+     93.46325993537903
+    ],
+    "PROTO-F": [
+     94.80308890342712,
+     95.00609040260315,
+     93.82866621017456
+    ]
+   },
+   "acc": {
+    "PROTO": 93.78806551297505,
+    "PROTO-F": 94.54594850540161
+   },
+   "std": {
+    "PROTO": 0.2502795063469232,
+    "PROTO-F": 0.513921408032764
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "food101",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 85.88448762893677,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     86.51815056800842,
+     86.51484847068787,
+     86.24422550201416
+    ],
+    "PROTO-F": [
+     86.59405708312988,
+     86.52145266532898,
+     86.42244338989258
+    ]
+   },
+   "acc": {
+    "PROTO": 86.42574151357015,
+    "PROTO-F": 86.51265104611714
+   },
+   "std": {
+    "PROTO": 0.12835828190414053,
+    "PROTO-F": 0.07033688601864366
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "fgvc",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 24.812480807304382,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     32.70326852798462,
+     33.33333134651184,
+     32.163214683532715
+    ],
+    "PROTO-F": [
+     34.29342806339264,
+     35.61356067657471,
+     34.71347093582153
+    ]
+   },
+   "acc": {
+    "PROTO": 32.733271519343056,
+    "PROTO-F": 34.87348655859629
+   },
+   "std": {
+    "PROTO": 0.47816899792381096,
+    "PROTO-F": 0.5506912497009097
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "sun397",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 62.55919337272644,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     70.83123326301575,
+     71.61208987236023,
+     71.05793356895447
+    ],
+    "PROTO-F": [
+     71.14357352256775,
+     71.48614525794983,
+     71.52140736579895
+    ]
+   },
+   "acc": {
+    "PROTO": 71.16708556811015,
+    "PROTO-F": 71.38370871543884
+   },
+   "std": {
+    "PROTO": 0.32799378071238044,
+    "PROTO-F": 0.17041036197743142
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "dtd",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 44.03073191642761,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     60.46099066734314,
+     60.46099066734314,
+     61.17021441459656
+    ],
+    "PROTO-F": [
+     60.638296604156494,
+     62.23404407501221,
+     62.352246046066284
+    ]
+   },
+   "acc": {
+    "PROTO": 60.69739858309428,
+    "PROTO-F": 61.74152890841166
+   },
+   "std": {
+    "PROTO": 0.33433128070761725,
+    "PROTO-F": 0.7815941250011169
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "eurosat",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 48.493826389312744,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     77.70370244979858,
+     79.02469038963318,
+     77.06173062324524
+    ],
+    "PROTO-F": [
+     75.50617456436157,
+     80.75308799743652,
+     77.54321098327637
+    ]
+   },
+   "acc": {
+    "PROTO": 77.93004115422566,
+    "PROTO-F": 77.93415784835815
+   },
+   "std": {
+    "PROTO": 0.8172003703522356,
+    "PROTO-F": 2.159807820468224
+   }
+  },
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "ucf101",
+   "K": 4,
+   "test_split": "testfull",
+   "protocol": "ours",
+   "zs": 67.40681529045105,
+   "scale": [
+    64.0
+   ],
+   "epochs": 20,
+   "loss_on": "adapter",
+   "impl": "ours-from-paper",
+   "per_seed": {
+    "PROTO": [
+     78.16547155380249,
+     79.77795004844666,
+     77.16097831726074
+    ],
+    "PROTO-F": [
+     78.95849347114563,
+     79.59291338920593,
+     75.83927512168884
+    ]
+   },
+   "acc": {
+    "PROTO": 78.3681333065033,
+    "PROTO-F": 78.1302273273468
+   },
+   "std": {
+    "PROTO": 1.0779422062313515,
+    "PROTO-F": 1.6405220032182257
+   }
+  }
+ ]
+}

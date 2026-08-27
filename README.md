@@ -28,12 +28,16 @@ produced by `scripts/make_le_gda_head_to_head.py` from the JSON files in
 | method | caltech | dtd | eurosat | fgvc | food101 | in1k | flowers | pets | cars | sun397 | ucf101 | **mean** | trained? |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Zero-shot CLIP | 93.27 | 44.03 | 48.49 | 24.81 | 85.88 | 67.84 | 70.81 | 89.10 | 65.55 | 62.56 | 67.41 | **65.43** | — |
-| Tip-Adapter | 94.87 | 65.98 | 78.31 | 40.28 | 86.42 | 69.47 | 93.82 | 91.67 | 75.47 | 71.53 | 78.29 | **76.92** | no |
-| Tip-Adapter-F | 95.24 | 68.22 | 82.79 | 40.97 | 87.17 | 71.44 | 95.01 | 93.06 | 79.18 | 75.19 | 82.88 | **79.20** | yes (20 ep) |
+| Tip-Adapter *(orig.)* | 94.86 | 65.54 | 77.87 | 40.46 | 86.36 | 69.47 | 93.90 | 91.74 | 75.52 | 71.71 | 78.26 | **76.88** | no |
+| Proto-Adapter | 95.36 | 67.45 | 79.10 | 38.83 | 86.93 | 70.77 | 95.60 | 92.15 | 79.20 | 74.62 | 81.69 | **78.34** | no |
 | GPCache (16 keys) | 95.36 | 69.94 | 83.26 | 43.91 | 86.94 | 70.58 | 96.91 | 92.40 | 78.59 | 74.38 | 81.32 | **79.42** | no |
-| Proto-Adapter-F | 95.42 | 69.86 | 83.85 | 42.13 | 87.17 | 71.40 | 95.49 | 92.91 | 81.59 | 75.47 | 82.17 | **79.77** | yes (20 ep) |
-| GDA-CLIP | 95.10 | 72.52 | 87.53 | 48.91 | 87.16 | 71.44 | 97.36 | 93.73 | 83.01 | 75.77 | 82.84 | **81.40** | no |
+| Tip-Adapter-F *(orig.)* | 95.81 | 72.16 | 87.56 | 45.75 | 87.30 | **71.98** | 96.52 | 92.96 | 82.76 | 76.17 | 83.79 | **81.16** | yes (20 ep) |
+| Proto-Adapter-F | 95.66 | 70.41 | 81.15 | 45.42 | 87.12 | **72.19** | 97.28 | 92.80 | 82.78 | 76.16 | 83.35 | **80.39** | yes (20 ep) |
+| GDA-CLIP (final-feature) | 95.10 | 72.52 | 87.53 | 48.91 | 87.16 | 71.44 | 97.36 | 93.73 | 83.01 | 75.77 | 82.84 | **81.40** | no |
 | **LE-GDA (ours)** | 95.84 | 72.12 | 90.55 | 51.94 | 87.12 | 71.36 | 97.90 | 93.66 | 83.36 | 76.50 | 85.10 | **82.31** | no |
+
+*(orig.)* marks rows produced by **the original authors' own code** under our
+protocol — see [Comparative methods](#3-comparative-methods-under-our-protocol).
 
 **All four backbones**, 11-dataset means, `±` one s.d. over 3 seeds:
 
@@ -44,9 +48,15 @@ produced by `scripts/make_le_gda_head_to_head.py` from the JSON files in
 | RN50 | 72.81 ± 0.06 | 75.56 ± 0.15 | **77.47 ± 0.11** | **+1.91 ± 0.06** |
 | RN101 | 75.26 ± 0.25 | 77.41 ± 0.22 | **79.68 ± 0.30** | **+2.26 ± 0.24** |
 
-LE-GDA is top of every column on all four backbones, ahead of both 20-epoch
-trained arms while training nothing. The margin is positive at every shot count
-K ∈ {1, 2, 4, 8, 16} on every backbone.
+LE-GDA has the highest 11-dataset mean on all four backbones, ahead of both
+20-epoch trained arms while training nothing, and `LE-GDA − GDA-CLIP` is
+positive at every shot count K ∈ {1, 2, 4, 8, 16} on every backbone.
+
+On ImageNet LE-GDA is behind the two gradient-trained adapters, while staying
+ahead of the training-free ones on average and on both ResNets (GDA-CLIP edges
+it there by 0.21 and 0.08 on ViT-B/32 and ViT-B/16). The paper has the full
+per-dataset analysis; `scripts/make_per_dataset_table.py` prints the breakout
+this repository generates it from.
 
 **Read the increment honestly.** `LE-GDA − GDA-CLIP` is what this work adds.
 The large jump from zero-shot CLIP to GDA-CLIP (≈ +16 points) belongs to the
@@ -60,7 +70,7 @@ contains theirs up to grid resolution.
 
 ## What is and is not in this repository
 
-**In:** all the code, and the result JSONs (`evidence/`, 83 files, ~7 MB) that
+**In:** all the code, and the result JSONs (`evidence/`, 179 files) that
 every table and figure in the paper is generated from. Nothing in the paper is
 hand-copied from a terminal — the generators read these files and assert their
 own consistency.
@@ -176,9 +186,17 @@ PYTHONPATH=. python scripts/plot_le_gda_selection.py --strict
 PYTHONPATH=. python scripts/analyze_nonlinear_fusion.py \
     --file evidence/nonlinear_fusion_full_*.json
 
-# per-backbone main table (LaTeX) and the LE-GDA vs GDA-CLIP scatter
-PYTHONPATH=. python scripts/make_backbone_main_table.py
+# per-backbone main table (LaTeX). Refuses to emit unless all 44 cells of the
+# upstream Tip-Adapter run exist -- nothing is projected or carried over.
+PYTHONPATH=. python scripts/rebuild_backbone_main.py
+
+# the same table broken out per dataset: 11 x 8 methods x 4 backbones.
+# Prints to stdout; this repository keeps a single .md file.
+PYTHONPATH=. python scripts/make_per_dataset_table.py
+
+# LE-GDA vs GDA-CLIP across backbones, and the shot sweep with both checks
 PYTHONPATH=. python scripts/plot_le_gda_vs_gda.py
+PYTHONPATH=. python scripts/analyze_shot_sweep.py
 ```
 
 One generator is not in this list: `scripts/measure_le_gda_storage.py` reads the
@@ -238,49 +256,101 @@ The trained baseline arms are the long pole at roughly 2 h.
 twice. Write to a name outside that scheme and the table will silently lack the
 cell; write to the wrong split's name and the generator raises.
 
-### 3. Comparative methods
+### 3. Comparative methods under our protocol
 
-The baselines in the table are re-run here rather than quoted, on the identical
-features, splits, seeds and support sets as LE-GDA, so every row of the
-head-to-head is comparable cell by cell.
+The baselines are **re-run here rather than quoted**, on the identical features,
+splits, seeds and support sets as LE-GDA, so every row of the head-to-head is
+comparable cell by cell.
 
-| row | arm | runner |
-|---|---|---|
-| Tip-Adapter | `TIP` | `run_calibrated_ft.py` |
-| Tip-Adapter-F (20 ep) | `TIP-F` | `run_calibrated_ft.py` |
-| Proto-Adapter-F (20 ep) | `CC-F-1` | `run_calibrated_ft.py` |
-| GPCache (16 keys) | `gpcache16` | `run_baselines_e4.py` |
-| GDA-CLIP | `gda_last` | `run_layer_ensemble.py` (the 1-member ensemble) |
+Two of them run **the original authors' own code**. That distinction is the
+`Impl.` column of the main table and it is not cosmetic — an earlier version of
+this repository scored Tip-Adapter-F with our own frozen-feature trainer and
+**understated it by 2.30 points**.
+
+| row | arm | `Impl.` | runner |
+|---|---|---|---|
+| Tip-Adapter | `TIP` | **orig.** | `main.py` (upstream Tip-Adapter, patched) |
+| Tip-Adapter-F (20 ep) | `TIP-F` | **orig.** | `main.py` |
+| Proto-Adapter | `PROTO` | ours | `run_proto_adapter.py` |
+| Proto-Adapter-F (20 ep) | `PROTO-F` | ours | `run_proto_adapter.py` |
+| GPCache (16 keys) | `gpcache16` | ours | `run_baselines_e4.py` |
+| GDA-CLIP (final-feature) | `gda_last` | ours | `run_layer_ensemble.py` (the 1-member ensemble) |
+
+#### What "our protocol" means
+
+`scripts/protocol_adapter.py` defines six clauses, `P1`–`P6`, and is the only
+thing an upstream implementation is made to obey. Nothing else about it is
+touched — not the model, the loss, the optimiser, the schedule, the batch size,
+or the augmentation pipeline:
+
+- **P1** our validation split and the standard uncapped test split
+- **P2** our seeded K-shot draw from the same cached support pool every other
+  row is fitted on, guarded by a byte-identical label-order assert
+- **P3** no test-set model selection of any kind
+- **P4** an upstream arm keeps **its own** hyperparameter grid
+- **P5** the shared zero-shot head
+- **P6** three seeds, `[0, 1, 2]`
+
+`P4` is worth spelling out: the Tip-Adapter arms keep upstream's own α/β search
+grid, which is edge-pinned on a minority of cells, so those two rows are lower
+bounds. The grid is not widened — widening an upstream arm's grid stops it being
+that arm.
+
+`patches/` carries the exact diff applied to upstream Tip-Adapter, so the
+deviation is auditable rather than described:
+
+| patch | what it does |
+|---|---|
+| `tip_adapter_our_protocol.patch` | P1/P2/P3/P6 — our splits, our seeded draw, deletion of upstream's per-epoch test-set checkpoint selection, and `--shots`/`--backbone`/`--seeds`/`--test-split`/`--out` |
+| `tip_adapter_searchhp_hoist.patch` | loop-invariant hoisting in `search_hp`, **numerically exact** (verified bit-identical on a completed cell); required only because ImageNet is otherwise ~a day per call |
+
+**Proto-Adapter has no public code at all.** It is implemented from
+Kato, Nota & Aoki, *Sensors* 24(11):3624 (2024). Every clause the paper states
+(`S1`–`S13`) and every choice it leaves unstated (`U1`–`U12`) is written down in
+the design note in the docstring of `scripts/proto_adapter.py`, and both arms
+were calibrated against the paper's own Tables 2–4 before being reported at all
+(−0.11 training-free, −0.43 trained, net of the zero-shot gap). The ArcFace
+scale `s = 64` is selected once on validation and then frozen; it is never
+re-selected per shot count.
 
 ```bash
 BBS="RN50 RN101 ViT-B/32 ViT-B/16"
 
-# Tip-Adapter / Tip-Adapter-F / Proto-Adapter-F, one 20-epoch schedule, 3 seeds.
-# imagenet goes in its own file on its own split, as everywhere else.
-PYTHONPATH=. python scripts/run_calibrated_ft.py --datasets $TEN \
-    --backbones $BBS --epochs 20 --test-split testfull \
-    --out evidence/calibrated_ft_e20_ten_testfull_seeded.json
-PYTHONPATH=. python scripts/run_calibrated_ft.py --datasets imagenet \
-    --backbones $BBS --epochs 20 --test-split test \
-    --out evidence/calibrated_ft_e20_in_testfull_seeded.json
+# --- Tip-Adapter and Tip-Adapter-F: UPSTREAM code, our protocol.
+# One invocation per (dataset, backbone); 3 seeds inside.
+for ds in caltech101 dtd eurosat fgvc food101 oxford_flowers \
+          oxford_pets stanford_cars sun397 ucf101 imagenet; do
+  PYTHONPATH=. python main.py --config configs/$ds.yaml \
+      --backbone ViT-B/16 --seeds 0 1 2 --test-split testfull \
+      --out evidence/runB/runB_${ds}_ViT-B-16.json
+done
 
-# GPCache and the cache-model baselines
+# --- Proto-Adapter and Proto-Adapter-F, from the paper. s=64 is frozen.
+PYTHONPATH=. python scripts/run_proto_adapter.py \
+    --protocol ours --arms free ft --scale 64 --seeds 0 1 2 \
+    --backbones ViT-B/16 --k 16 \
+    --out evidence/proto_adapter/ours_ViT-B-16.json
+
+# --- the K in {1,2,4,8} sweep behind the shot-sweep figures
+bash scripts/run_jobA_shots.sh     # Tip-Adapter arms  -> evidence/runB_shots/
+bash scripts/run_jobB_shots.sh     # Proto-Adapter arms -> evidence/proto_adapter/
+
+# --- GPCache and the cache-model baselines
 PYTHONPATH=. python scripts/run_baselines_e4.py --datasets $TEN \
     --backbones $BBS --test-split testfull \
     --out evidence/baselines_e4_testfull.json
 ```
 
-The GPCache row is read straight out of that JSON by the table and figure
-generators; there is no separate scoring step.
-
-The per-backbone main table reads the two `_seeded` files above;
-`make_le_gda_head_to_head.py` reads the merged `calibrated_ft_e20_testfull.json`
-and globs `baselines_e4*_testfull.json`. Both sets are shipped in `evidence/`,
-so you can regenerate either table before running any of this.
-
 GDA-CLIP needs no separate run: `analyze_layer_ensemble.py` asserts that the
 1-member ensemble at `last` equals the `gda_last` arm exactly (`max|Δ| = 0`), so
 the baseline is nested inside our own sweep and cannot drift from it.
+
+`run_calibrated_ft.py` is still shipped, but it **no longer feeds any
+comparative row.** Its `TIP`/`TIP-F`/`CC-F-1` arms were our own
+reimplementations; `CC-F-1` in particular is *not* Proto-Adapter-F (plain
+cross-entropy instead of ArcFace, no channel-wise normalisation, a different
+calibration rule). It remains only as the generator for our own cache-compression
+arms.
 
 ### 4. Ablation — leave-one-out configuration transfer
 
@@ -324,16 +394,29 @@ scripts/
   run_layer_ensemble.py         the LE-GDA sweep; also emits the GDA-CLIP arm
   run_nonlinear_fusion.py       per-sample standardised fusion (the deployed rule)
   run_baselines_e4.py           GPCache and the cache-model baselines
-  run_calibrated_ft.py          Tip-Adapter, Tip-Adapter-F, Proto-Adapter-F
+  protocol_adapter.py           P1-P6: the only clauses an upstream arm obeys
+  proto_adapter.py              Proto-Adapter from the paper + the design note
+  run_proto_adapter.py          Proto-Adapter / Proto-Adapter-F runner
+  run_jobA_shots.sh             Tip-Adapter arms, K in {1,2,4,8}
+  run_jobB_shots.sh             Proto-Adapter arms, K in {1,2,4,8}
+  analyze_shot_sweep.py         the shot sweep + its two pre-registered checks
+  rebuild_backbone_main.py      per-backbone main table, measured cells only
+  make_per_dataset_table.py     the same table broken out per dataset
+  run_calibrated_ft.py          our cache-compression arms (NOT the baselines)
   run_config_transfer.py        leave-one-out configuration-transfer ablation
   run_weighting_ceiling.py      test-oracle ceiling for any linear combiner
   analyze_*.py                  scorers: gates, fusion, selection, ablation
   make_*.py / plot_*.py         every paper table and figure, from evidence/
   preflight.py                  instrument checks each runner asserts before scoring
+main.py      upstream Tip-Adapter, patched to obey P1-P6 (see patches/)
+patches/     the exact diff applied to upstream Tip-Adapter
 clip/        CLIP model + tokenizer (from openai/CLIP)
 datasets/    CoOp-style dataset builders and splits
 configs/     per-dataset YAML (root_path, hyperparameter search grid)
 evidence/    result JSONs — the source of every published number
+  runB/          Tip-Adapter + Tip-Adapter-F, upstream code, K=16
+  runB_shots/    the same, K in {1,2,4,8}
+  proto_adapter/ Proto-Adapter + Proto-Adapter-F, all K
 utils.py     shared helpers
 LICENSE      MIT
 ```
@@ -393,3 +476,29 @@ them.
   year   = {2026}
 }
 ```
+
+"""
+     I am working on drafting the ReadMe files, which include the entire process of reproducing the results of  PyBullet to Blender for generating sim data. I am also recording the errors that could occured and how to fix them. I am including the code snippets to run everything from a clean rebuild. 
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""

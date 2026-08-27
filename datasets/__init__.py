@@ -8,6 +8,10 @@ from .fgvc import FGVCAircraft
 from .food101 import Food101
 from .oxford_flowers import OxfordFlowers
 from .stanford_cars import StanfordCars
+# ImageNet over the `imagenet_subset` tree. Upstream's own
+# datasets/imagenet.py needs the full ~155 GB release and is not in
+# `dataset_list` at all; see the README, Comparative methods.
+from .imagenet_subset import ImageNetSubset
 
 
 dataset_list = {
@@ -21,6 +25,7 @@ dataset_list = {
                 "food101": Food101,
                 "oxford_flowers": OxfordFlowers,
                 "stanford_cars": StanfordCars,
+                "imagenet": ImageNetSubset,
                 }
 
 

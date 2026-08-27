@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "ORIGINAL_IMPLEMENTATIONS_OUR_PROTOCOL.md S2",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "imagenet",
+   "K": 16,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     69.585,
+     69.435,
+     69.39
+    ],
+    "TIP-F": [
+     71.9825,
+     71.89,
+     72.065
+    ]
+   },
+   "acc": {
+    "TIP": 69.47,
+    "TIP-F": 71.97916666666667
+   },
+   "std": {
+    "TIP": 0.08336666000266196,
+    "TIP-F": 0.07148232104669001
+   }
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "ORIGINAL_IMPLEMENTATIONS_OUR_PROTOCOL.md S2",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "ViT-B/32",
+   "dataset": "stanford_cars",
+   "K": 16,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     69.76744186046511,
+     69.77987812461137,
+     70.47630891680139
+    ],
+    "TIP-F": [
+     78.06243004601417,
+     77.09240144260664,
+     78.49769929113295
+    ]
+   },
+   "acc": {
+    "TIP": 70.00787630062595,
+    "TIP-F": 77.88417692658459
+   },
+   "std": {
+    "TIP": 0.3312707876135944,
+    "TIP-F": 0.5873931912600208
+   }
+  }
+ ]
+}

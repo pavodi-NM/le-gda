@@ -29,7 +29,7 @@ SOURCES, and the two traps this pipeline already fell into once:
   (2) NAMING. The evidence labels the operator `F1`; that is an internal arm
       label, NOT the F1 score -- every axis here is top-1 accuracy. The
       manuscript says "per-sample standardisation" and never prints "F1"
-      (write-up §6.1).
+      (the write-up §6.1).
 
 Dataset coverage is printed per point as `n`, and a point drawn from fewer
 datasets than its neighbours is REPORTED rather than silently averaged, because
@@ -156,7 +156,7 @@ def main():
             ax.plot([0], [z], marker="D", color=PAL[0], ms=6, ls="none",
                     label="Zero-shot CLIP", zorder=6)
         ax.plot(ks, [cur[k][0] for k in ks], "-.", color=PAL[5], marker="^",
-                ms=5.5, lw=1.5, mew=0, label="GDA-CLIP", zorder=4)
+                ms=5.5, lw=1.5, mew=0, label="GDA-CLIP (final-feature)", zorder=4)
         ax.plot(ks, [cur[k][1] for k in ks], "-", color=PAL[3], marker="*",
                 ms=9, lw=1.6, mew=0, label="LE-GDA (ours)", zorder=5)
         style(ax)
@@ -177,7 +177,7 @@ def main():
     # House rule 2: nothing on the canvas is unexplained. The zero line is the
     # baseline itself, since the axis plots a difference against it.
     ax.axhline(0, color=INK2, lw=1.0, ls=":", zorder=2,
-               label="no difference from GDA-CLIP")
+               label="no difference from GDA-CLIP (final-feature)")
     for bb, m in margins.items():
         ks = sorted(m)
         ax.plot(ks, [m[k] for k in ks], "-", color=BB_COL[bb],

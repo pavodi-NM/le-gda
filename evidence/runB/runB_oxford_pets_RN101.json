@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "ORIGINAL_IMPLEMENTATIONS_OUR_PROTOCOL.md S2",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "RN101",
+   "dataset": "oxford_pets",
+   "K": 16,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     87.51703461433632,
+     87.73507767784137,
+     87.70782229490324
+    ],
+    "TIP-F": [
+     90.67865903515944,
+     90.16080675933497,
+     90.32433905696375
+    ]
+   },
+   "acc": {
+    "TIP": 87.65331152902698,
+    "TIP-F": 90.38793495048606
+   },
+   "std": {
+    "TIP": 0.09700261880650109,
+    "TIP-F": 0.2161420414894183
+   }
+  }
+ ]
+}

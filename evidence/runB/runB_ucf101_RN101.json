@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "ORIGINAL_IMPLEMENTATIONS_OUR_PROTOCOL.md S2",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "RN101",
+   "dataset": "ucf101",
+   "K": 16,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     73.2751784298176,
+     73.3016124768702,
+     73.9888977002379
+    ],
+    "TIP-F": [
+     80.43880518107322,
+     80.38593708696801,
+     81.15252445149352
+    ]
+   },
+   "acc": {
+    "TIP": 73.52189620230857,
+    "TIP-F": 80.65908890651158
+   },
+   "std": {
+    "TIP": 0.33039621568865285,
+    "TIP-F": 0.34957854304127767
+   }
+  }
+ ]
+}

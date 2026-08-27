@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "ORIGINAL_IMPLEMENTATIONS_OUR_PROTOCOL.md S2",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "caltech101",
+   "K": 4,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     94.11764705882354,
+     94.56389452332657,
+     94.07707910750507
+    ],
+    "TIP-F": [
+     95.05070993914808,
+     95.37525354969574,
+     95.05070993914808
+    ]
+   },
+   "acc": {
+    "TIP": 94.25287356321839,
+    "TIP-F": 95.15889114266396
+   },
+   "std": {
+    "TIP": 0.22054775429749596,
+    "TIP-F": 0.15299132520601288
+   }
+  }
+ ]
+}

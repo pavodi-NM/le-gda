@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "ORIGINAL_IMPLEMENTATIONS_OUR_PROTOCOL.md S2",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "food101",
+   "K": 2,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     86.17491749174917,
+     86.03300330033004,
+     85.94389438943894
+    ],
+    "TIP-F": [
+     86.07590759075907,
+     86.14191419141915,
+     86.27722772277228
+    ]
+   },
+   "acc": {
+    "TIP": 86.05060506050604,
+    "TIP-F": 86.16501650165017
+   },
+   "std": {
+    "TIP": 0.09513248628879384,
+    "TIP-F": 0.08379632625981331
+   }
+  }
+ ]
+}

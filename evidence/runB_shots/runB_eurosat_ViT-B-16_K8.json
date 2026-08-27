@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "ORIGINAL_IMPLEMENTATIONS_OUR_PROTOCOL.md S2",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "eurosat",
+   "K": 8,
+   "test_split": "testfull",
+   "epochs": 100,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     76.06172839506173,
+     76.09876543209876,
+     77.32098765432099
+    ],
+    "TIP-F": [
+     82.60493827160494,
+     84.4320987654321,
+     86.11111111111111
+    ]
+   },
+   "acc": {
+    "TIP": 76.49382716049382,
+    "TIP-F": 84.38271604938272
+   },
+   "std": {
+    "TIP": 0.5850862030159398,
+    "TIP-F": 1.4318149285914512
+   }
+  }
+ ]
+}

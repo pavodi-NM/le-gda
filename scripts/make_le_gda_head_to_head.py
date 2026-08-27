@@ -6,9 +6,10 @@ WHERE EACH ROW COMES FROM, because they are different runs and that is the
 whole risk in this table:
 
     zero-shot                  either source (they agree, and this asserts it)
-    Tip-Adapter    TIP         evidence/calibrated_ft_e20.json
-    Tip-Adapter-F  TIP-F       evidence/calibrated_ft_e20.json  (trained, 20 ep)
-    Proto-Adapter-F CC-F-1     evidence/calibrated_ft_e20.json  (trained, 20 ep)
+    Tip-Adapter    TIP         evidence/runB/       UPSTREAM CODE, our protocol
+    Tip-Adapter-F  TIP-F       evidence/runB/       UPSTREAM CODE, trained 20 ep
+    Proto-Adapter  PROTO       evidence/proto_adapter/
+    Proto-Adapter-F PROTO-F    evidence/proto_adapter/            trained, 20 ep
     GPCache        gpcache16   evidence/baselines_e4*.json
     GDA-CLIP       gda_last    evidence/layer_ensemble_*.json
     LE-GDA         rules.F1.test  evidence/nonlinear_fusion_*.json
@@ -48,7 +49,16 @@ E4_FILES = ["evidence/baselines_e4.json", "evidence/baselines_e4_phaseA.json",
             "evidence/baselines_e4_phaseA2.json",
             "evidence/baselines_e4_phaseA3.json",
             "evidence/baselines_e4_rn.json"]
-FT_FILE = "evidence/calibrated_ft_e20.json"
+# RETIRED as a source for the comparative rows. The Tip-Adapter arms are now
+# the UPSTREAM implementation run under our protocol (evidence/runB/), and the
+# Proto-Adapter arms are implemented from the Sensors paper
+# (evidence/proto_adapter/). The previous source, calibrated_ft_e20.json, held
+# OUR reimplementations: TIP was faithful to +0.04 but TIP-F ran on a
+# frozen-feature trainer worth -2.30, and `CC-F-1` is not Proto-Adapter-F at
+# all (plain CE instead of ArcFace, no channel-wise normalization, a different
+# calibration rule). See the README, Comparative methods under our protocol.
+RUNB_GLOB = "evidence/runB/runB_*.json"
+PROTO_GLOB = "evidence/proto_adapter/ours_*.json"
 # LE-GDA under per-sample standardisation. Globbed because the shot counts were
 # separate passes; imagenet always sits in its own file on its own split.
 NF_GLOBS = ["evidence/nonlinear_fusion_full_*.json",
@@ -71,8 +81,18 @@ def _missing(bb, d, k):
 
 
 def cells(path):
+    """Row list, whatever the file calls it.
+
+    layer_ensemble / baselines_e4 / calibrated_ft write `cells` or a bare list;
+    runB and proto_adapter go through protocol_adapter.report, which writes
+    {"meta": ..., "rows": [...]}.
+    """
     d = json.load(open(path))
-    return d["cells"] if isinstance(d, dict) and "cells" in d else d
+    if isinstance(d, dict):
+        for k in ("cells", "rows"):
+            if k in d:
+                return d[k]
+    return d
 
 
 def load(suffix=""):
@@ -81,7 +101,19 @@ def load(suffix=""):
 
     le = sum((cells(sfx(f"evidence/layer_ensemble_{f}.json"))
               for f in LE_FILES), [])
-    ft = {(c["backbone"], c["dataset"]): c for c in cells(sfx(FT_FILE))}
+    # NEVER sfx: both sources were run on the standard split only.
+    ft = {}
+    for g in (RUNB_GLOB, PROTO_GLOB):
+        for path in sorted(glob.glob(g)):
+            for c in cells(path):
+                if c.get("K") != 16:
+                    continue
+                d = ft.setdefault((c["backbone"], c["dataset"]), {"acc": {}})
+                d["acc"].update(c["acc"])
+                # runB carries no zero-shot; proto_adapter does, and it feeds
+                # the alignment assert below.
+                if "zs" in c:
+                    d["zs"] = c["zs"]
     e4 = {}
     for p in map(sfx, E4_FILES):
         try:
@@ -282,9 +314,10 @@ def main():
             rows[d] = {
                 "zero-shot": s[0]["zs"],
                 "Tip-Adapter": f.get("TIP"),
-                "Tip-Adapter-F": f.get("TIP-F"),
+                "Proto-Adapter": f.get("PROTO"),
                 "GPCache (16 keys)": mean(gp) if gp else None,
-                "Proto-Adapter-F (CC-F-1)": f.get("CC-F-1"),
+                "Tip-Adapter-F": f.get("TIP-F"),
+                "Proto-Adapter-F": f.get("PROTO-F"),
                 "GDA-CLIP": mean(c["acc"]["gda_last"] for c in s),
                 "LE-GDA (ours)": mean(nf[(bb, d, args.k)])
                 if (bb, d, args.k) in nf else _missing(bb, d, args.k),
@@ -297,7 +330,7 @@ def main():
         print("| method | " + " | ".join(hdr) + " | **mean** | trained? |")
         print("|---" * (len(hdr) + 3) + "|")
         TR = {"Tip-Adapter-F": "**yes (20 ep)**",
-              "Proto-Adapter-F (CC-F-1)": "**yes (20 ep)**",
+              "Proto-Adapter-F": "**yes (20 ep)**",
               "zero-shot": "—"}
         for m in order:
             vals = [rows[d][m] for d in rows]

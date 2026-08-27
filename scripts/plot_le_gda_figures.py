@@ -5,23 +5,50 @@ Writes 12 figures: one per dataset, plus the average over datasets.
     fig_le_gda_shots_average.pdf
     fig_le_gda_shots_<dataset>.pdf   x 11
 
-House style: the project figure-style convention.
+House style: scripts/plot_paper_figures.py and memory/paper-figure-style.md.
 Rule 6 -- one figure = one PDF -- is why these are separate files and not a
 3x4 grid: "this is a paper, not a draft".
 
-SERIES, and the single source of each. Every method in the §5b.6
+SERIES, and the single source of each. Every method in the sec.5b.6
 head-to-head appears, at every shot count it is defined at:
 
   Zero-shot CLIP          K=0 marker            layer_ensemble_*.json (`zs`)
-  Tip-Adapter             TIP                   calibrated_ft_*.json
+  Tip-Adapter             TIP        ORIGINAL   runB/, runB_shots/
+  Proto-Adapter           PROTO                 proto_adapter/ours_*.json
   GPCache (16 keys)       gpcache16             baselines_e4_*.json
-  Tip-Adapter-F           TIP-F      TRAINED    calibrated_ft_*.json
-  Proto-Adapter-F         CC-F-1     TRAINED    calibrated_ft_*.json
+  Tip-Adapter-F           TIP-F      ORIGINAL   runB/, runB_shots/
+  Proto-Adapter-F         PROTO-F    TRAINED    proto_adapter/ours_*.json
   GDA-CLIP                gda_last              layer_ensemble_*.json
   LE-GDA (ours)           rules.F1.test         nonlinear_fusion_*.json
 
+RETIRED 2026-08-26 (the README, Comparative methods under our protocol): the
+first four rows used to be read out of `calibrated_ft_*.json`, and three of
+them were wrong.
+
+  * `Tip-Adapter`/`Tip-Adapter-F` were OUR reimplementation. TIP is faithful to
+    +0.04, but TIP-F ran on our frozen-feature trainer, worth **-2.30**
+    grid-wide (the shot-sweep measurement) -- the single biggest defect in the old figure.
+  * `Proto-Adapter-F` was our `CC-F-1`, which is NOT Proto-Adapter-F: plain CE
+    instead of ArcFace, no channel-wise normalization, a different calibration
+    rule, and the weak trainer again (the Proto-Adapter design note).
+  * There was no training-free `Proto-Adapter` series at all.
+
+They now come from the same evidence `rebuild_backbone_main.py` builds
+the per-backbone main table from, so the figure and the table can no longer disagree
+about the same row. `calibrated_ft_*.json` is still read, but ONLY for its
+zero-shot values, which feed the alignment assert below.
+
+IMAGENET'S SPLIT LABEL DIFFERS BETWEEN SOURCES AND THE IMAGES DO NOT. The
+layer_ensemble / nonlinear_fusion files label it `test`; runB and
+proto_adapter label it `testfull`. Both are the same 40 000-image set: the
+zero-shot accuracies are bit-identical (67.84499883651733 from either), and
+40000*zs is an integer while 30000*zs is not. `test` there is a
+cached-tensor namespace, not `protocol_adapter.eval_items(...,"test")`, which
+caps at 30/class. The alignment assert is what actually guards this -- the
+labels are checked per source, the numbers are checked against each other.
+
 LE-GDA IS PLOTTED UNDER PER-SAMPLE STANDARDISATION, NOT THE UNIFORM MEAN.
-The write-up (§5e) supersedes the fusion rule: each space's score vector is
+the write-up §5e supersedes the fusion rule: each space's score vector is
 standardised across the CLASS axis for every test sample before averaging, which
 takes KC-S1 from +0.534 to +1.136. The evidence files label that operator `F1`
 and the old uniform mean `F0` -- internal arm labels only, NOT the F1 score.
@@ -78,29 +105,61 @@ LE_FILES = ["vitb16", "shots_b16", "imagenet_b16", "shots_in_b16"]
 NF_GLOBS = ["evidence/nonlinear_fusion_full_*.json",
             "evidence/nonlinear_fusion_k14_*.json",
             "evidence/nonlinear_fusion_k28_*.json"]
+# Zero-shot only now; the four method series moved to RUNB_GLOBS/PROTO_GLOBS.
 FT_FILES = ["evidence/calibrated_ft_e20.json",
             "evidence/calibrated_ft_shots_b16.json"]
+# Upstream Tip-Adapter under our protocol. K=16 in runB/, K in {1,2,4,8} in
+# runB_shots/ -- a separate directory because `update_runB_status.py` and
+# `rebuild_backbone_main.py` both glob `evidence/runB/runB_*.json` and neither
+# filters on K, so a K<16 file dropped in there would silently corrupt the
+# Tip-Adapter rows of the per-backbone main table.
+RUNB_GLOBS = ["evidence/runB/runB_*.json",
+              "evidence/runB_shots/runB_*.json"]
+# Proto-Adapter from the Sensors paper. K=16 is ours_<tag>.json, the sweep is
+# ours_<tag>_K<k>.json; both carry `K`, so one glob is safe here.
+PROTO_GLOBS = ["evidence/proto_adapter/ours_*.json"]
 E4_FILES = ["evidence/baselines_e4.json", "evidence/baselines_e4_phaseA.json",
             "evidence/baselines_e4_phaseA2.json",
             "evidence/baselines_e4_shots_b16.json"]
 
 ZS = "Zero-shot CLIP"
 # (label, colour, marker, linestyle). Drawing order == legend order.
+# LINESTYLE CARRIES THE `Grad.` COLUMN OF the per-backbone main table.
+#   dashed `--`  == gradient-based, and NOTHING else is dashed
+#   dash-dot `-.`== GDA-CLIP, kept separable: it is the baseline the paper's
+#                   decomposition is measured against and the whole content of
+#                   fig_le_gda_margin
+#   solid `-`    == ours
+#   dotted `:`   == the remaining training-free arms
+# Colour and marker carry identity; linestyle carries the property. This matters
+# at K=1, where the crossing is between the two dashed curves.
+# Grey pairs the two Proto-Adapter arms; order follows the per-backbone main table.
 SERIES = [
     (ZS, PAL[0], "D", "none"),
-    ("Tip-Adapter", PAL[2], "o", "--"),
-    ("GPCache", PAL[4], "v", ":"),
+    ("Tip-Adapter", PAL[2], "o", ":"),
+    ("Proto-Adapter", "#adadad", "X", ":"),
+    ("GPCache (W+C)", PAL[4], "v", ":"),
     ("Tip-Adapter-F", PAL[1], "s", "--"),
-    ("Proto-Adapter-F", "#7a7a7a", "P", ":"),
-    ("GDA-CLIP", PAL[5], "^", "-."),
+    ("Proto-Adapter-F", "#7a7a7a", "P", "--"),
+    ("GDA-CLIP (final-feature)", PAL[5], "^", "-."),
     ("LE-GDA (ours)", PAL[3], "*", "-"),
 ]
 IMAGENET_ZS_TOL = 0.05
 
 
 def cells(path):
+    """Row list, whatever the file calls it.
+
+    `layer_ensemble`/`baselines_e4`/`calibrated_ft` write `cells` or a bare
+    list; `runB` and `proto_adapter` go through `protocol_adapter.report`,
+    which writes `{"meta": ..., "rows": [...]}`.
+    """
     d = json.load(open(path))
-    return d["cells"] if isinstance(d, dict) and "cells" in d else d
+    if isinstance(d, dict):
+        for k in ("cells", "rows"):
+            if k in d:
+                return d[k]
+    return d
 
 
 def collect(backbone, strict, suffix=""):
@@ -121,8 +180,9 @@ def collect(backbone, strict, suffix=""):
             if c["backbone"] != backbone:
                 continue
             zs[c["dataset"]] = c["zs"]
-            add(c["dataset"], "GDA-CLIP", c["K"], c["acc"]["gda_last"])
-    # LE-GDA: per-sample standardisation only (§5e), never the uniform mean.
+            add(c["dataset"], "GDA-CLIP (final-feature)", c["K"],
+                c["acc"]["gda_last"])
+    # LE-GDA: per-sample standardisation only (sec.5e), never the uniform mean.
     seen_nf = 0
     for g in NF_GLOBS:
         for p in sorted(glob.glob(g)):   # NEVER sfx: see SPLIT CONSISTENCY
@@ -130,7 +190,7 @@ def collect(backbone, strict, suffix=""):
                 if c["backbone"] != backbone or "F1" not in c.get("rules", {}):
                     continue
                 # SPLIT CONSISTENCY. The z-fusion evidence is on the STANDARD
-                # split ("testfull"; imagenet on its own "test", §7.1). The
+                # split ("testfull"; imagenet on its own "test", sec.7.1). The
                 # other series come from layer_ensemble/calibrated_ft/baselines
                 # files that exist in BOTH a capped and a _testfull version, and
                 # `suffix` is what selects between them. Reading LE-GDA from the
@@ -162,12 +222,30 @@ def collect(backbone, strict, suffix=""):
         for c in cells(p):
             if c["backbone"] != backbone:
                 continue
+            # ZERO-SHOT ONLY. The TIP / TIP-F / CC-F-1 arms in these files
+            # are retired: see the module docstring.
             zs_alt.setdefault(c["dataset"], c["zs"])
-            for lab, arm in (("Tip-Adapter", "TIP"),
-                             ("Tip-Adapter-F", "TIP-F"),
-                             ("Proto-Adapter-F", "CC-F-1")):
-                if arm in c["acc"]:
-                    add(c["dataset"], lab, c.get("K", 16), c["acc"][arm])
+    # Upstream Tip-Adapter and Proto-Adapter. NEVER sfx: both were run on the
+    # standard split only, exactly like the LE-GDA evidence.
+    for g in RUNB_GLOBS + PROTO_GLOBS:
+        for p in sorted(glob.glob(g)):
+            proto = "proto_adapter" in p
+            for r in cells(p):
+                if r["backbone"] != backbone:
+                    continue
+                if r.get("test_split") != "testfull":
+                    raise SystemExit(
+                        f"{p}: test_split={r.get('test_split')!r}, expected "
+                        "'testfull' (see SPLIT CONSISTENCY)")
+                if proto:
+                    zs_alt.setdefault(r["dataset"], r["zs"])
+                for arm, lab in (("TIP", "Tip-Adapter"),
+                                 ("TIP-F", "Tip-Adapter-F"),
+                                 ("PROTO", "Proto-Adapter"),
+                                 ("PROTO-F", "Proto-Adapter-F")):
+                    if arm in r.get("per_seed", {}):
+                        for v in r["per_seed"][arm]:
+                            add(r["dataset"], lab, r["K"], v)
     for p in map(sfx, E4_FILES):
         if not os.path.exists(p):
             continue
@@ -175,7 +253,7 @@ def collect(backbone, strict, suffix=""):
             if c["backbone"] != backbone or "gpcache16" not in c["acc"]:
                 continue
             zs_alt.setdefault(c["dataset"], c["zs"])
-            add(c["dataset"], "GPCache", c.get("K", 16), c["acc"]["gpcache16"])
+            add(c["dataset"], "GPCache (W+C)", c.get("K", 16), c["acc"]["gpcache16"])
 
     bad = [(d, zs[d], zs_alt[d]) for d in zs if d in zs_alt
            and abs(zs[d] - zs_alt[d]) > (IMAGENET_ZS_TOL if d == "imagenet"
@@ -298,10 +376,14 @@ def main():
         written.append(one_figure(
             "average", avg, mean(zs[d] for d in avg_ds), args.out,
             args.width, args.dpi,
-            subtitle=f"Average over {len(avg_ds)} datasets"))
+            subtitle=f"{args.backbone} - Average over {len(avg_ds)} datasets"))
     for d in have:
+        # Same convention as the average panel: the backbone leads the title,
+        # built from args.backbone so it cannot claim ViT-B/16 on a run that
+        # was not ViT-B/16.
         written.append(one_figure(d, data[d], zs.get(d), args.out, args.width,
-                                  args.dpi))
+                                  args.dpi,
+                                  subtitle=f"{args.backbone} - {NICE.get(d, d)}"))
     print(f"\nwrote {len(written)} figures to {args.out}/ "
           f"(.pdf + .png each) [{args.backbone}]")
     for w in written:
