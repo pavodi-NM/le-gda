@@ -3,7 +3,9 @@
 Official code for **"LE-GDA: Layer-Ensemble Gaussian Discriminant Analysis for
 Training-Free Few-Shot CLIP"**, accepted at **WACV 2027**.
 
-LE-GDA fits a shared-covariance Gaussian discriminant classifier on several
+LE-GDA extends [GDA-CLIP](https://github.com/mrflogs/ICLR24) (ICLR 2024) from
+the final CLIP embedding to multiple layers of the image encoder.
+It fits a shared-covariance Gaussian discriminant classifier on several
 feature spaces from **one** CLIP forward pass: intermediate transformer blocks
 and ResNet stages, as well as the final projected embedding. It standardises
 each layer's class scores per query, selects a small set of layers on the
@@ -184,7 +186,7 @@ examples as LE-GDA, so the tables compare methods under identical conditions.
 | Tip-Adapter / Tip-Adapter-F | original authors' code, adapted to our protocol | `main.py` |
 | Proto-Adapter / Proto-Adapter-F | ours, from the paper (no public code exists) | `scripts/run_proto_adapter.py` |
 | GPCache | ours | `scripts/run_baselines_e4.py` |
-| GDA-CLIP | ours: LE-GDA restricted to the final layer | `scripts/run_layer_ensemble.py` |
+| [GDA-CLIP](https://github.com/mrflogs/ICLR24) | ours: LE-GDA restricted to the final layer | `scripts/run_layer_ensemble.py` |
 
 The changes to the original Tip-Adapter code are limited to the evaluation
 protocol: our data splits and seeded few-shot sampling, no model selection on
@@ -236,8 +238,9 @@ MIT, see [LICENSE](LICENSE). The datasets keep their own licences.
 
 This code builds on [Tip-Adapter](https://github.com/gaopengcuhk/Tip-Adapter),
 [CLIP](https://github.com/openai/CLIP), [CoOp](https://github.com/KaiyangZhou/CoOp),
-[CLIP-Adapter](https://github.com/gaopengcuhk/CLIP-Adapter) and the GDA-CLIP
-line of work on training-free discriminant classifiers for CLIP.
+and [CLIP-Adapter](https://github.com/gaopengcuhk/CLIP-Adapter). LE-GDA
+extends [GDA-CLIP](https://github.com/mrflogs/ICLR24), and we thank its
+authors for releasing their code.
 
 ## Citation
 
