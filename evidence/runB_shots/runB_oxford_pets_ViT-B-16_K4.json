@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "P1-P6, scripts/protocol_adapter.py",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "oxford_pets",
+   "K": 4,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     90.65140365222132,
+     91.87789588443718,
+     89.99727446170618
+    ],
+    "TIP-F": [
+     92.20496047969473,
+     91.55083128917961,
+     90.51512673753066
+    ]
+   },
+   "acc": {
+    "TIP": 90.84219133278823,
+    "TIP-F": 91.423639502135
+   },
+   "std": {
+    "TIP": 0.7795230115058673,
+    "TIP-F": 0.6957096291115311
+   }
+  }
+ ]
+}

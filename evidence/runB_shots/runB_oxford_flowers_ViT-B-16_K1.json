@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "P1-P6, scripts/protocol_adapter.py",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "oxford_flowers",
+   "K": 1,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     83.59723913926106,
+     86.07389362565976,
+     83.23183110028421
+    ],
+    "TIP-F": [
+     87.21071863580998,
+     84.97766950872919,
+     85.1400730816078
+    ]
+   },
+   "acc": {
+    "TIP": 84.30098795506835,
+    "TIP-F": 85.77615374204899
+   },
+   "std": {
+    "TIP": 1.2624781572628314,
+    "TIP-F": 1.0165549848809783
+   }
+  }
+ ]
+}

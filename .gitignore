@@ -1,0 +1,20 @@
+# Derived, never committed: rebuild with scripts/download_and_prepare.py
+caches/
+data/
+figures/
+
+# Runs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Torch tensors (features, cache models)
+*.pt
+*.pth
+
+.DS_Store

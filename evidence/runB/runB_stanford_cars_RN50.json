@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "P1-P6, scripts/protocol_adapter.py",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "RN50",
+   "dataset": "stanford_cars",
+   "K": 16,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     65.75052854122622,
+     65.99925382415122,
+     66.683248352195
+    ],
+    "TIP-F": [
+     74.28180574555404,
+     74.82900136798905,
+     75.63735853749533
+    ]
+   },
+   "acc": {
+    "TIP": 66.14434357252415,
+    "TIP-F": 74.91605521701281
+   },
+   "std": {
+    "TIP": 0.39436010426647355,
+    "TIP-F": 0.5568151233622319
+   }
+  }
+ ]
+}

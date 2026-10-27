@@ -1,0 +1,2277 @@
+{
+  "rows": [
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "caltech101",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 94.48275862068965,
+          "val": 94.70858764648438,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 94.80730223123732,
+          "val": 94.70858764648438,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11",
+            "L10",
+            "L11",
+            "L4"
+          ]
+        }
+      },
+      "anchor_free_F1": 94.80730223123732,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "caltech101",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 94.27991886409737,
+          "val": 94.40184020996094,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "last",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 93.87423935091277,
+          "val": 94.47852325439453,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "last",
+            "L4",
+            "L8",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 93.87423935091277,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "caltech101",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 93.42799188640974,
+          "val": 94.55521392822266,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "L8",
+            "L10",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 93.4685598377282,
+          "val": 94.63189697265625,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L8",
+            "L10",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 93.4685598377282,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "caltech101",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 95.01014198782961,
+          "val": 95.78221130371094,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "L11",
+            "L6",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 95.17241379310344,
+          "val": 96.01226806640625,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11",
+            "L6"
+          ]
+        }
+      },
+      "anchor_free_F1": 95.17241379310344,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "caltech101",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 95.09127789046653,
+          "val": 96.24232482910156,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "L11",
+            "L4",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 94.88843813387425,
+          "val": 96.08895874023438,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 94.88843813387425,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "caltech101",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 95.33468559837728,
+          "val": 95.78221130371094,
+          "alpha": 57.36152510448683,
+          "subset": [
+            "pre",
+            "L6",
+            "L6",
+            "L4"
+          ]
+        },
+        "F1": {
+          "test": 95.29411764705883,
+          "val": 95.5521469116211,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "pre",
+            "L6",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 95.29411764705883,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "dtd",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 58.274231678487,
+          "val": 58.86524963378906,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "L11",
+            "L11",
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 57.91962174940898,
+          "val": 58.42198181152344,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 57.91962174940898,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "dtd",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 58.51063829787234,
+          "val": 58.86524963378906,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 58.687943262411345,
+          "val": 60.28368377685547,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L11",
+            "L11",
+            "L4",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 58.687943262411345,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "dtd",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 58.983451536643024,
+          "val": 58.59928894042969,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "L11",
+            "L11",
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 58.451536643026,
+          "val": 58.42198181152344,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 58.451536643026,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "dtd",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.32624113475177,
+          "val": 68.88298034667969,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11",
+            "L4",
+            "L4"
+          ]
+        },
+        "F1": {
+          "test": 70.0354609929078,
+          "val": 69.14893341064453,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "pre",
+            "L11",
+            "L4",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 70.0354609929078,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "dtd",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 68.43971631205673,
+          "val": 68.17375183105469,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "pre",
+            "L8",
+            "L4",
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 68.02600472813239,
+          "val": 67.90779876708984,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "pre",
+            "pre",
+            "pre",
+            "L4"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.02600472813239,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "dtd",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.03073286052009,
+          "val": 68.61701965332031,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11",
+            "pre",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 69.62174940898345,
+          "val": 68.61701965332031,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "last",
+            "L11",
+            "last",
+            "L4"
+          ]
+        }
+      },
+      "anchor_free_F1": 69.62174940898345,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "eurosat",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 72.81481481481481,
+          "val": 75.16666412353516,
+          "alpha": 57.36152510448683,
+          "subset": [
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 73.54320987654322,
+          "val": 75.4000015258789,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L6",
+            "L11",
+            "L6",
+            "L6"
+          ]
+        }
+      },
+      "anchor_free_F1": 73.54320987654322,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "eurosat",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 77.27160493827161,
+          "val": 79.16667175292969,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "L6",
+            "L10",
+            "L6",
+            "L4"
+          ]
+        },
+        "F1": {
+          "test": 78.62962962962963,
+          "val": 79.5,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "L6",
+            "pre",
+            "L8"
+          ]
+        }
+      },
+      "anchor_free_F1": 78.62962962962963,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "eurosat",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 76.29629629629629,
+          "val": 77.5,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "L6",
+            "L4"
+          ]
+        },
+        "F1": {
+          "test": 77.46913580246914,
+          "val": 77.9000015258789,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L6",
+            "last",
+            "L4",
+            "L4"
+          ]
+        }
+      },
+      "anchor_free_F1": 77.46913580246914,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "eurosat",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 85.74074074074075,
+          "val": 85.5999984741211,
+          "alpha": 239.50266199874855,
+          "subset": [
+            "L11",
+            "L6",
+            "L6",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 86.33333333333333,
+          "val": 86.63333129882812,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "L11",
+            "L4",
+            "L6"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.33333333333333,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "eurosat",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 87.01234567901234,
+          "val": 87.5999984741211,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "pre",
+            "L8",
+            "L6",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 89.08641975308642,
+          "val": 89.83332824707031,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "L11",
+            "L6",
+            "L4",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 89.08641975308642,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "eurosat",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 88.38271604938272,
+          "val": 88.73332977294922,
+          "alpha": 621.016941891561,
+          "subset": [
+            "L6",
+            "last",
+            "L8",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 88.81481481481481,
+          "val": 89.66666412353516,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L6",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 88.81481481481481,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "fgvc",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 30.753075307530754,
+          "val": 31.5,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "L11",
+            "L11",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 31.803180318031803,
+          "val": 31.633333206176758,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L11",
+            "pre",
+            "pre",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 31.803180318031803,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "fgvc",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 31.083108310831083,
+          "val": 31.066665649414062,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "L11",
+            "pre",
+            "pre",
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 31.503150315031505,
+          "val": 30.96666717529297,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L11",
+            "L11",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 31.503150315031505,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "fgvc",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 29.882988298829883,
+          "val": 31.366666793823242,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 29.732973297329732,
+          "val": 31.33333396911621,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 29.732973297329732,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "fgvc",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 45.424542454245426,
+          "val": 44.733333587646484,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "L11",
+            "pre",
+            "pre",
+            "L4"
+          ]
+        },
+        "F1": {
+          "test": 45.604560456045604,
+          "val": 46.13333511352539,
+          "alpha": 57.36152510448683,
+          "subset": [
+            "L11",
+            "L10",
+            "pre",
+            "L10"
+          ]
+        }
+      },
+      "anchor_free_F1": 45.604560456045604,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "fgvc",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 44.58445844584458,
+          "val": 44.633331298828125,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "pre",
+            "L11",
+            "L10",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 45.93459345934593,
+          "val": 45.733333587646484,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "pre",
+            "L10",
+            "last",
+            "L10"
+          ]
+        }
+      },
+      "anchor_free_F1": 45.93459345934593,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "fgvc",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 42.99429942994299,
+          "val": 43.766666412353516,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "L11",
+            "pre",
+            "L10",
+            "L10"
+          ]
+        },
+        "F1": {
+          "test": 43.77437743774377,
+          "val": 45.06666564941406,
+          "alpha": 148.7352107293511,
+          "subset": [
+            "L11",
+            "L10",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 43.77437743774377,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "food101",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 86.44554455445545,
+          "val": 86.69966888427734,
+          "alpha": 0.11721022975334809,
+          "subset": [
+            "pre",
+            "L6",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 86.36633663366337,
+          "val": 86.66666412353516,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "pre",
+            "pre",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.36633663366337,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "food101",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 86.36633663366337,
+          "val": 86.50165557861328,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "L11",
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 86.16171617161716,
+          "val": 86.33663940429688,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "pre",
+            "L6"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.16171617161716,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "food101",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 86.07590759075907,
+          "val": 86.23762512207031,
+          "alpha": 0.045203536563602445,
+          "subset": [
+            "L11",
+            "L11",
+            "L11",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 86.02970297029702,
+          "val": 86.17162322998047,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.02970297029702,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "food101",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 86.95379537953795,
+          "val": 87.02970886230469,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 86.8019801980198,
+          "val": 86.9967041015625,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.8019801980198,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "food101",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 86.93069306930693,
+          "val": 88.05281066894531,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "pre",
+            "last",
+            "last",
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 86.99339933993399,
+          "val": 87.85478973388672,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.99339933993399,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "food101",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 86.6897689768977,
+          "val": 87.02970886230469,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "pre",
+            "L6",
+            "L4"
+          ]
+        },
+        "F1": {
+          "test": 86.72607260726073,
+          "val": 87.02970886230469,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 86.72607260726073,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_flowers",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 91.55501421031262,
+          "val": 91.2596435546875,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "L11",
+            "pre",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 91.39261063743402,
+          "val": 91.19537353515625,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "L11",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 91.39261063743402,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_flowers",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 91.63621599675193,
+          "val": 92.22364807128906,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "L11",
+            "L4",
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 91.43321153065368,
+          "val": 92.03084564208984,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 91.43321153065368,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_flowers",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 91.59561510353228,
+          "val": 92.28791809082031,
+          "alpha": 92.36708571873855,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 91.43321153065368,
+          "val": 92.0951156616211,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 91.43321153065368,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_flowers",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 97.56394640682095,
+          "val": 97.42930603027344,
+          "alpha": 385.6620421163474,
+          "subset": [
+            "pre",
+            "L6",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 97.40154283394234,
+          "val": 97.30077362060547,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "L11",
+            "pre",
+            "L4",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 97.40154283394234,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_flowers",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 96.87373122208689,
+          "val": 97.23650360107422,
+          "alpha": 1000.0000000000013,
+          "subset": [
+            "pre",
+            "L6",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 96.46772228989038,
+          "val": 97.043701171875,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "pre",
+            "L11",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 96.46772228989038,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_flowers",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 96.75192854242793,
+          "val": 96.85089874267578,
+          "alpha": 6723.357536499333,
+          "subset": [
+            "L11",
+            "L4",
+            "L4",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 96.71132764920829,
+          "val": 97.17223358154297,
+          "alpha": 57.36152510448683,
+          "subset": [
+            "L11",
+            "L11",
+            "L4",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 96.71132764920829,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_pets",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 90.56963750340692,
+          "val": 89.67391204833984,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 89.53393295175798,
+          "val": 89.80978393554688,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "L10"
+          ]
+        }
+      },
+      "anchor_free_F1": 89.53393295175798,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_pets",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 91.19651131098392,
+          "val": 92.79891204833984,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 91.60534205505587,
+          "val": 92.79891204833984,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 91.60534205505587,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_pets",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 90.56963750340692,
+          "val": 90.76087188720703,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 90.35159443990187,
+          "val": 90.48912811279297,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 90.35159443990187,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_pets",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 92.31398201144727,
+          "val": 95.10870361328125,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "last",
+            "L6",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 92.64104660670482,
+          "val": 94.70108795166016,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "last",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 92.64104660670482,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_pets",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 92.94085581902425,
+          "val": 95.38043975830078,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 93.10438811665304,
+          "val": 95.38043975830078,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "pre",
+            "pre",
+            "last",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 93.10438811665304,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "oxford_pets",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 92.5320250749523,
+          "val": 94.2934799194336,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 92.04142818206596,
+          "val": 94.42935180664062,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11",
+            "L11",
+            "L11",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 92.04142818206596,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "stanford_cars",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.74256933217262,
+          "val": 70.94801330566406,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 69.5933341624176,
+          "val": 70.82568359375,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "pre",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 69.5933341624176,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "stanford_cars",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 71.63288148240268,
+          "val": 73.39449310302734,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11",
+            "L11",
+            "L10"
+          ]
+        },
+        "F1": {
+          "test": 71.55826389752518,
+          "val": 72.84403228759766,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 71.55826389752518,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "stanford_cars",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 70.7499067280189,
+          "val": 72.53822326660156,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 70.7747792563114,
+          "val": 72.53822326660156,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 70.7747792563114,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "stanford_cars",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 79.30605646063923,
+          "val": 80.67278289794922,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "last",
+            "L11",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 79.20656634746922,
+          "val": 80.42813873291016,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "pre",
+            "L11",
+            "last",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 79.20656634746922,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "stanford_cars",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 79.62939932844174,
+          "val": 81.34556579589844,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "pre",
+            "L4",
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 79.55478174356423,
+          "val": 81.10091400146484,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 79.55478174356423,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "stanford_cars",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 80.1144136301455,
+          "val": 81.8348617553711,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "L11",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 79.77863449819674,
+          "val": 81.5902099609375,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "last",
+            "L11",
+            "L10",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 79.77863449819674,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "sun397",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.50125944584383,
+          "val": 69.54660034179688,
+          "alpha": 1.2689610031679222,
+          "subset": [
+            "L11",
+            "pre",
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 69.26952141057934,
+          "val": 69.7229232788086,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 69.26952141057934,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "sun397",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.12846347607054,
+          "val": 70.02518463134766,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "L11",
+            "last",
+            "L4",
+            "L4"
+          ]
+        },
+        "F1": {
+          "test": 69.26952141057934,
+          "val": 69.89924621582031,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11",
+            "L8",
+            "L11",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 69.26952141057934,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "sun397",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 69.02770780856423,
+          "val": 68.6397933959961,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L10",
+            "L11",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 68.1662468513854,
+          "val": 68.74055480957031,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L10"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.1662468513854,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "sun397",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 74.69017632241814,
+          "val": 75.46599578857422,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "L11",
+            "L6",
+            "L6",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 74.37783375314862,
+          "val": 75.39042663574219,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "L11",
+            "L10",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 74.37783375314862,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "sun397",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 74.55919395465995,
+          "val": 75.06297302246094,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "L11",
+            "L6",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 74.95214105793451,
+          "val": 75.2896728515625,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11",
+            "last",
+            "L8",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 74.95214105793451,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "sun397",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 74.99244332493703,
+          "val": 75.51637268066406,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "last",
+            "L6",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 75.20403022670025,
+          "val": 75.36524200439453,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "L11",
+            "L11",
+            "L8",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 75.20403022670025,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "ucf101",
+      "K": 2,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 75.52207242928893,
+          "val": 77.29188537597656,
+          "alpha": 0.3039195382313196,
+          "subset": [
+            "pre",
+            "L10"
+          ]
+        },
+        "F1": {
+          "test": 76.47369812318266,
+          "val": 78.5563735961914,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L11",
+            "L6",
+            "pre",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 76.47369812318266,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "ucf101",
+      "K": 2,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 76.7909066878139,
+          "val": 78.97787475585938,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "L11",
+            "L6",
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 77.18741739360296,
+          "val": 79.5047378540039,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L11",
+            "L10",
+            "L6",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 77.18741739360296,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "ucf101",
+      "K": 2,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 73.67168913560666,
+          "val": 76.9230728149414,
+          "alpha": 0.18873918221350974,
+          "subset": [
+            "pre"
+          ]
+        },
+        "F1": {
+          "test": 74.91408934707904,
+          "val": 78.39830780029297,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L11",
+            "L10",
+            "L6",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 74.91408934707904,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "ucf101",
+      "K": 8,
+      "seed": 0,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 82.3156225218081,
+          "val": 87.40779113769531,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "pre",
+            "L8",
+            "last",
+            "L6"
+          ]
+        },
+        "F1": {
+          "test": 84.21887390959556,
+          "val": 88.8303451538086,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "pre",
+            "L8",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 84.21887390959556,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "ucf101",
+      "K": 8,
+      "seed": 1,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 83.39941845096484,
+          "val": 86.88092041015625,
+          "alpha": 35.62247890262444,
+          "subset": [
+            "L11",
+            "L8",
+            "L6",
+            "L10"
+          ]
+        },
+        "F1": {
+          "test": 83.61089082738567,
+          "val": 87.40779113769531,
+          "alpha": 22.122162910704485,
+          "subset": [
+            "L11",
+            "L6",
+            "L11",
+            "L10"
+          ]
+        }
+      },
+      "anchor_free_F1": 83.61089082738567,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "ucf101",
+      "K": 8,
+      "seed": 2,
+      "test_split": "testfull",
+      "rules": {
+        "F0": {
+          "test": 83.13507798043881,
+          "val": 86.45942687988281,
+          "alpha": 13.738237958832645,
+          "subset": [
+            "L11",
+            "last",
+            "L8",
+            "L8"
+          ]
+        },
+        "F1": {
+          "test": 83.37298440391224,
+          "val": 87.46047973632812,
+          "alpha": 8.531678524172815,
+          "subset": [
+            "L11",
+            "L8",
+            "last",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 83.37298440391224,
+      "anchor_dev": 0.0
+    }
+  ],
+  "preflight": {
+    "name": "nonlinear_fusion",
+    "fp32": [
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      }
+    ],
+    "nesting": [
+      {
+        "label": "F0 reproduces recorded le_gda (caltech101)",
+        "max_abs_diff": 3.0007855684743845e-06,
+        "tol": 0.0001,
+        "acc_diff": 0.0,
+        "ok": true
+      }
+    ],
+    "pinning": {
+      "gda_L4": {
+        "reg": {
+          "n": 60,
+          "lo": 0.016666666666666666,
+          "hi": 0.1,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L6": {
+        "reg": {
+          "n": 60,
+          "lo": 0.0,
+          "hi": 0.16666666666666666,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L8": {
+        "reg": {
+          "n": 60,
+          "lo": 0.016666666666666666,
+          "hi": 0.08333333333333333,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L10": {
+        "reg": {
+          "n": 60,
+          "lo": 0.0,
+          "hi": 0.016666666666666666,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L11": {
+        "reg": {
+          "n": 60,
+          "lo": 0.0,
+          "hi": 0.016666666666666666,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_pre": {
+        "reg": {
+          "n": 60,
+          "lo": 0.0,
+          "hi": 0.05,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_last": {
+        "reg": {
+          "n": 60,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "le_gda": {
+        "alpha": {
+          "n": 60,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        }
+      }
+    },
+    "activation": {}
+  }
+}

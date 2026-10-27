@@ -1,0 +1,310 @@
+{
+  "rows": [
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 2,
+      "seed": 0,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 68.91,
+          "val": 69.27999877929688,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11",
+            "L6",
+            "L10"
+          ]
+        },
+        "F1": {
+          "test": 68.92,
+          "val": 69.3699951171875,
+          "alpha": 0.7880462815669909,
+          "subset": [
+            "L11",
+            "L11",
+            "L6",
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.92,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 2,
+      "seed": 1,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 68.7225,
+          "val": 69.04000091552734,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "last",
+            "L6",
+            "L10",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 68.8325,
+          "val": 68.97000122070312,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "L11",
+            "last"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.8325,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 2,
+      "seed": 2,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 68.9625,
+          "val": 69.0,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 68.93,
+          "val": 69.02999877929688,
+          "alpha": 0.4893900918477494,
+          "subset": [
+            "L11",
+            "L11",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 68.93,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 8,
+      "seed": 0,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 70.9825,
+          "val": 71.5,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "L11"
+          ]
+        },
+        "F1": {
+          "test": 71.055,
+          "val": 71.45000457763672,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11",
+            "L11",
+            "last",
+            "pre"
+          ]
+        }
+      },
+      "anchor_free_F1": 71.055,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 8,
+      "seed": 1,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 70.95,
+          "val": 71.31999969482422,
+          "alpha": 5.298316906283711,
+          "subset": [
+            "L11",
+            "L11",
+            "L4"
+          ]
+        },
+        "F1": {
+          "test": 70.845,
+          "val": 71.20999908447266,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "L11"
+          ]
+        }
+      },
+      "anchor_free_F1": 70.845,
+      "anchor_dev": 0.0
+    },
+    {
+      "backbone": "ViT-B/16",
+      "dataset": "imagenet",
+      "K": 8,
+      "seed": 2,
+      "test_split": "test",
+      "rules": {
+        "F0": {
+          "test": 70.605,
+          "val": 71.08000183105469,
+          "alpha": 3.290344562312668,
+          "subset": [
+            "pre",
+            "last"
+          ]
+        },
+        "F1": {
+          "test": 70.57,
+          "val": 70.94999694824219,
+          "alpha": 2.043359717856943,
+          "subset": [
+            "pre",
+            "L11",
+            "pre",
+            "L8"
+          ]
+        }
+      },
+      "anchor_free_F1": 70.57,
+      "anchor_dev": 0.0
+    }
+  ],
+  "preflight": {
+    "name": "nonlinear_fusion",
+    "fp32": [
+      {
+        "tensor": "val_L4",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L6",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L8",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L10",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_L11",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_pre",
+        "dtype": "torch.float32",
+        "ok": true
+      },
+      {
+        "tensor": "val_last",
+        "dtype": "torch.float32",
+        "ok": true
+      }
+    ],
+    "nesting": [
+      {
+        "label": "F0 reproduces recorded le_gda (imagenet)",
+        "max_abs_diff": 3.2520294155347074e-06,
+        "tol": 0.0001,
+        "acc_diff": 0.0,
+        "ok": true
+      }
+    ],
+    "pinning": {
+      "gda_L4": {
+        "reg": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L6": {
+        "reg": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L8": {
+        "reg": {
+          "n": 6,
+          "lo": 0.16666666666666666,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L10": {
+        "reg": {
+          "n": 6,
+          "lo": 0.3333333333333333,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_L11": {
+        "reg": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_pre": {
+        "reg": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "gda_last": {
+        "reg": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": true,
+          "hi_domain": false
+        }
+      },
+      "le_gda": {
+        "alpha": {
+          "n": 6,
+          "lo": 0.0,
+          "hi": 0.0,
+          "lo_domain": false,
+          "hi_domain": false
+        }
+      }
+    },
+    "activation": {}
+  }
+}

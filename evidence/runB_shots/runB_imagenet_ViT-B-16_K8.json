@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "protocol": "P1-P6, scripts/protocol_adapter.py",
+  "run": "B",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "rows": [
+  {
+   "backbone": "ViT-B/16",
+   "dataset": "imagenet",
+   "K": 8,
+   "test_split": "testfull",
+   "epochs": 20,
+   "impl": "upstream-main.py",
+   "per_seed": {
+    "TIP": [
+     69.34,
+     69.2175,
+     68.7875
+    ],
+    "TIP-F": [
+     70.69,
+     70.5825,
+     70.6425
+    ]
+   },
+   "acc": {
+    "TIP": 69.115,
+    "TIP-F": 70.63833333333334
+   },
+   "std": {
+    "TIP": 0.23691594852746511,
+    "TIP-F": 0.0439854774013229
+   }
+  }
+ ]
+}
